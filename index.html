@@ -441,6 +441,164 @@
             }
         }
 
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 2px solid rgba(20, 184, 166, 0.1);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(20, 184, 166, 0.15);
+        }
+
+        .pricing-card.popular {
+            border-color: #14B8A6;
+            box-shadow: 0 8px 30px rgba(20, 184, 166, 0.2);
+        }
+
+        .pricing-card.popular:hover {
+            box-shadow: 0 20px 50px rgba(20, 184, 166, 0.25);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E5E7EB;
+            margin-bottom: 24px;
+        }
+
+        .pricing-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a2b3c;
+            margin-bottom: 12px;
+        }
+
+        .pricing-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #14B8A6;
+            line-height: 1;
+        }
+
+        .pricing-price.text {
+            font-size: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            color: #5a6b7c;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: #14B8A6;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .pricing-best-for {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(20, 184, 166, 0.12) 100%);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-best-for-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #14B8A6;
+            margin-bottom: 4px;
+        }
+
+        .pricing-best-for-text {
+            font-size: 14px;
+            color: #1a2b3c;
+            font-weight: 500;
+        }
+
+        .pricing-card .btn-primary {
+            width: 100%;
+            text-align: center;
+        }
+
+        .pricing-card .btn-secondary {
+            width: 100%;
+            text-align: center;
+        }
+
+        .pricing-note {
+            text-align: center;
+            max-width: 700px;
+            margin: 60px auto 0;
+            padding: 24px 32px;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(20, 184, 166, 0.1) 100%);
+            border-radius: 16px;
+            color: #5a6b7c;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .pricing-card.popular {
+                order: -1;
+            }
+        }
+
         /* About Section */
         .about-grid {
             display: grid;
@@ -1032,7 +1190,7 @@
         <div class="nav-links" id="navLinks">
             <a href="#services" class="nav-link">Services</a>
             <a href="#process" class="nav-link">Process</a>
-            <a href="#about" class="nav-link">About</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
             <a href="#portfolio" class="nav-link">Work</a>
             <a href="#contact" class="btn-primary small">Get in Touch</a>
         </div>
@@ -1127,6 +1285,77 @@
                     <p class="process-text">Once approved, your new site goes live and you start impressing customers.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Investment</p>
+                <h2 class="section-title">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+                <p class="section-subtitle">
+                    Choose the package that fits your needs. No hidden fees, no surprises.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Visual Refresh</h3>
+                        <p class="pricing-price">$350</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Modern color scheme & fonts</li>
+                        <li>Mobile-friendly updates</li>
+                        <li>2 rounds of revisions</li>
+                        <li>1-2 week turnaround</li>
+                    </ul>
+                    <div class="pricing-best-for">
+                        <p class="pricing-best-for-label">Best for</p>
+                        <p class="pricing-best-for-text">Sites that need a facelift</p>
+                    </div>
+                    <a href="#contact" class="btn-secondary">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="pricing-badge">Most Popular</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Full Redesign</h3>
+                        <p class="pricing-price">$750</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Complete new design</li>
+                        <li>Mobile-responsive</li>
+                        <li>Contact form setup</li>
+                        <li>3 rounds of revisions</li>
+                        <li>2-3 week turnaround</li>
+                    </ul>
+                    <div class="pricing-best-for">
+                        <p class="pricing-best-for-label">Best for</p>
+                        <p class="pricing-best-for-text">Outdated sites needing a fresh start</p>
+                    </div>
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Custom Project</h3>
+                        <p class="pricing-price text">Let's Talk</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Multi-page websites</li>
+                        <li>E-commerce features</li>
+                        <li>Ongoing support</li>
+                        <li>Custom timeline</li>
+                    </ul>
+                    <div class="pricing-best-for">
+                        <p class="pricing-best-for-label">Best for</p>
+                        <p class="pricing-best-for-text">Larger or unique projects</p>
+                    </div>
+                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <p class="pricing-note">
+                Every project is different. These prices are starting points — I'm happy to work with your budget. Let's chat and find something that works for you.
+            </p>
         </div>
     </section>
 

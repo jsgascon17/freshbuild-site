@@ -359,6 +359,88 @@
             gap: 30px;
         }
 
+        /* How It Works Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            right: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #14B8A6 0%, #0D9488 100%);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .process-number {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(20, 184, 166, 0.45);
+        }
+
+        .process-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a2b3c;
+            margin-bottom: 12px;
+        }
+
+        .process-text {
+            color: #5a6b7c;
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .process-grid::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
         /* About Section */
         .about-grid {
             display: grid;
@@ -949,6 +1031,7 @@
         </button>
         <div class="nav-links" id="navLinks">
             <a href="#services" class="nav-link">Services</a>
+            <a href="#process" class="nav-link">Process</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#portfolio" class="nav-link">Work</a>
             <a href="#contact" class="btn-primary small">Get in Touch</a>
@@ -1007,6 +1090,41 @@
                     <p class="card-text">
                         Speed matters. I'll optimize your site to load faster, keeping visitors engaged and improving your search rankings.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Process</p>
+                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                <p class="section-subtitle">
+                    Getting a fresh website is simple. Here's what to expect when we work together.
+                </p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3 class="process-title">Discovery Call</h3>
+                    <p class="process-text">We chat about your current website, your goals, and what you'd like to change.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3 class="process-title">Design Mockup</h3>
+                    <p class="process-text">I create a fresh new design for your site and share a preview link for you to review.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3 class="process-title">Revisions</h3>
+                    <p class="process-text">You give feedback, I make adjustments until you love it.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3 class="process-title">Launch</h3>
+                    <p class="process-text">Once approved, your new site goes live and you start impressing customers.</p>
                 </div>
             </div>
         </div>

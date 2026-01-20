@@ -599,6 +599,111 @@
             }
         }
 
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(20, 184, 166, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(20, 184, 166, 0.25);
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.1);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px 28px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a2b3c;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #14B8A6;
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-icon::before {
+            content: '+';
+            color: #14B8A6;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .faq-item.active .faq-icon {
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-icon::before {
+            color: white;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 28px 24px;
+            color: #5a6b7c;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 20px;
+                font-size: 16px;
+            }
+
+            .faq-answer-content {
+                padding: 0 20px 20px;
+                font-size: 15px;
+            }
+        }
+
         /* About Section */
         .about-grid {
             display: grid;
@@ -1359,6 +1464,75 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">FAQ</p>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="section-subtitle">
+                    Got questions? I've got answers.
+                </p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How long does a project take?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">A Visual Refresh typically takes 1-2 weeks, while a Full Redesign takes 2-3 weeks. Custom projects vary based on scope — we'll set a timeline together.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do I need to provide content?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">If you have an existing website, I can work with your current content. If you need new copy or images, I can help guide you or recommend resources.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What if I don't like the design?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">That's what revisions are for! I'll share a preview link so you can see the design before it goes live. We'll tweak it until you're happy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Will my website work on phones?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Absolutely. Every site I build is mobile-responsive, meaning it looks great on phones, tablets, and desktops.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you offer ongoing support?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Yes! After launch, I'm available for updates and tweaks. We can discuss a support plan that fits your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I get started?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Just fill out the contact form or email me at joseph@freshbuild.co. We'll set up a quick call to chat about your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section section-gray">
         <div class="container">
@@ -1544,6 +1718,22 @@
                 closeLightbox();
             }
         });
+
+        // FAQ accordion
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't already open
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
     </script>
 </body>
 </html>

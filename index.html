@@ -523,6 +523,7 @@
             gap: 16px;
             padding: 20px;
             background: linear-gradient(135deg, #f8fffe 0%, #f0fdfa 100%);
+            position: relative;
         }
 
         .before-after-item {
@@ -570,6 +571,180 @@
 
             .before-after-item img {
                 height: 180px;
+            }
+        }
+
+        /* Lightbox Modal */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 40px;
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2001;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .lightbox-close::before,
+        .lightbox-close::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .lightbox-close::before {
+            transform: rotate(45deg);
+        }
+
+        .lightbox-close::after {
+            transform: rotate(-45deg);
+        }
+
+        .lightbox-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1200px;
+            width: 100%;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .lightbox-overlay.active .lightbox-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-item img {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+
+        .lightbox-label {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lightbox-label.before {
+            background: #ef4444;
+            color: white;
+        }
+
+        .lightbox-label.after {
+            background: #14B8A6;
+            color: white;
+        }
+
+        .before-after-container.clickable {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .before-after-container.clickable:hover {
+            transform: scale(1.02);
+        }
+
+        .before-after-container.clickable::after {
+            content: 'Click to expand';
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .before-after-container.clickable:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-overlay {
+                padding: 20px;
+            }
+
+            .lightbox-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .lightbox-item img {
+                max-height: 40vh;
+            }
+
+            .lightbox-close {
+                top: 12px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .lightbox-close::before,
+            .lightbox-close::after {
+                width: 20px;
             }
         }
 
@@ -893,7 +1068,7 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-card featured">
-                    <div class="before-after-container">
+                    <div class="before-after-container clickable" onclick="openLightbox()">
                         <div class="before-after-item">
                             <img src="before.png" alt="MDC Assembly - Before redesign">
                             <span class="before-after-label before">Before</span>
@@ -962,6 +1137,21 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightboxOnOverlay(event)">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox"></button>
+        <div class="lightbox-content">
+            <div class="lightbox-item">
+                <img src="before.png" alt="MDC Assembly - Before redesign">
+                <span class="lightbox-label before">Before</span>
+            </div>
+            <div class="lightbox-item">
+                <img src="after.png" alt="MDC Assembly - After redesign">
+                <span class="lightbox-label after">After</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-logo">
@@ -982,6 +1172,30 @@
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('active');
             });
+        });
+
+        // Lightbox functions
+        function openLightbox() {
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeLightboxOnOverlay(event) {
+            if (event.target === document.getElementById('lightbox')) {
+                closeLightbox();
+            }
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
         });
     </script>
 </body>

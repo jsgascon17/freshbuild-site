@@ -793,6 +793,101 @@
             flex-shrink: 0;
         }
 
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(20, 184, 166, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(20, 184, 166, 0.15);
+            border-color: rgba(20, 184, 166, 0.3);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 80px;
+            font-family: 'Space Grotesk', sans-serif;
+            color: rgba(20, 184, 166, 0.1);
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #5a6b7c;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .testimonial-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a2b3c;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 14px;
+            color: #5a6b7c;
+        }
+
+        .testimonial-placeholder {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(20, 184, 166, 0.1) 100%);
+            border: 2px dashed rgba(20, 184, 166, 0.3);
+        }
+
+        .testimonial-placeholder .testimonial-text {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .testimonial-placeholder .testimonial-avatar {
+            background: rgba(20, 184, 166, 0.2);
+            color: rgba(20, 184, 166, 0.5);
+        }
+
+        .testimonial-placeholder .testimonial-info h4,
+        .testimonial-placeholder .testimonial-info p {
+            color: #9ca3af;
+        }
+
         /* Portfolio Grid */
         .portfolio-grid {
             display: grid;
@@ -1577,8 +1672,47 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Testimonials</p>
+                <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+                <p class="section-subtitle">
+                    Don't just take my word for it—hear from business owners who've refreshed their websites.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card testimonial-placeholder">
+                    <p class="testimonial-text">
+                        Your testimonial will appear here once the project is complete. Looking forward to sharing client feedback!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">?</div>
+                        <div class="testimonial-info">
+                            <h4>Your Name Here</h4>
+                            <p>Your Business</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card testimonial-placeholder">
+                    <p class="testimonial-text">
+                        Your testimonial will appear here once the project is complete. Looking forward to sharing client feedback!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">?</div>
+                        <div class="testimonial-info">
+                            <h4>Your Name Here</h4>
+                            <p>Your Business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section section-white">
+    <section id="portfolio" class="section section-gray">
         <div class="container">
             <div class="section-header">
                 <p class="section-label">Portfolio</p>

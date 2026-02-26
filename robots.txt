@@ -1,0 +1,6 @@
+# robots.txt for freshbuild.co
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://freshbuild.co/sitemap.xml

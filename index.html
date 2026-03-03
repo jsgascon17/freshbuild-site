@@ -290,6 +290,22 @@
             line-height: 1.6;
         }
 
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0066ff;
+            color: white;
+            padding: 8px 16px;
+            z-index: 10000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Animations */
         @keyframes fadeUp {
             from {
@@ -1654,13 +1670,14 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <nav>
         <a href="#" class="logo">
             <div class="logo-icon">F</div>
             <span>Fresh<span class="gradient-text">Build</span></span>
         </a>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
@@ -1674,7 +1691,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg-1 floating"></div>
@@ -1978,7 +1995,7 @@
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         How long does a project take?
                         <span class="faq-icon"></span>
                     </button>
@@ -1987,7 +2004,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         Do I need to provide content?
                         <span class="faq-icon"></span>
                     </button>
@@ -1996,7 +2013,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         What if I don't like the design?
                         <span class="faq-icon"></span>
                     </button>
@@ -2005,7 +2022,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         Will my website work on phones?
                         <span class="faq-icon"></span>
                     </button>
@@ -2014,7 +2031,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         Do you offer ongoing support?
                         <span class="faq-icon"></span>
                     </button>
@@ -2023,7 +2040,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         How do I get started?
                         <span class="faq-icon"></span>
                     </button>
@@ -2032,7 +2049,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         How much does a website cost in Rochester, NY?
                         <span class="faq-icon"></span>
                     </button>
@@ -2041,7 +2058,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         What's the difference between a landing page and a single-page website?
                         <span class="faq-icon"></span>
                     </button>
@@ -2050,7 +2067,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
                         Do you build websites for small businesses?
                         <span class="faq-icon"></span>
                     </button>
@@ -2293,14 +2310,16 @@
             const faqItem = button.parentElement;
             const isActive = faqItem.classList.contains('active');
 
-            // Close all FAQ items
+            // Close all FAQ items and reset aria-expanded
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
+                item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
             });
 
             // Open clicked item if it wasn't already open
             if (!isActive) {
                 faqItem.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
             }
         }
     </script>

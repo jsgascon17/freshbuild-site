@@ -797,6 +797,47 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Process Steps */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 32px 24px;
+}
+
+.process-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2b3c;
+    margin-bottom: 12px;
+}
+
+.process-step p {
+    font-size: 15px;
+    color: #5a6b7c;
+    line-height: 1.6;
+}
+
 /* FAQ Section */
 .faq-grid {
     display: grid;
@@ -888,7 +929,8 @@ footer {
 
     .services-grid,
     .portfolio-grid,
-    .faq-grid {
+    .faq-grid,
+    .process-grid {
         grid-template-columns: 1fr;
     }
 

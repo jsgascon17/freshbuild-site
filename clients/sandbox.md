@@ -13,6 +13,18 @@
 - [ ] GitHub repo created and linked
 - [ ] Initial content/project set up
 
+## Current Project: Roblox Game
+See [sandbox-game-features.md](sandbox-game-features.md) for full feature planning.
+
+### Planned Features
+- Challenge a Friend
+- Clans/Teams
+- Game Ratings
+- High Score Notifications
+- Battle Pass
+- Seasonal Themes
+- News Pop-ups ("What's New?" - triggers on event/season changes)
+
 ## Notes
 - Sandbox for Joey and friends to experiment with HTML, CSS, JS, etc.
 - Accessible via freshbuild SSH user (no sudo needed to edit files)

@@ -1,0 +1,16 @@
+# VSCode
+.vscode/
+
+# Cloned repositories (managed separately)
+mdc-redesign/
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.bak
+*.tmp
+/tmp/

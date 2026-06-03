@@ -22,11 +22,31 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 - [ ] Before/after photo social media posts
 
 ### Technical Improvements
-- [ ] Add schema markup for better SEO
 - [ ] Optimize images for faster loading
 - [ ] Add lazy loading for images
 - [ ] Set up Google Analytics goals/conversions
-- [ ] Create a sitemap and submit to search engines
+
+---
+
+## Freshbuild (freshbuild.co)
+
+### SEO & Marketing
+- [ ] Google Business Profile optimization
+- [ ] Client reviews & testimonials on Google
+- [ ] Location-specific landing pages (Brighton, Pittsford, Victor, Henrietta, etc.)
+- [ ] Blog/content marketing (how-to articles, web design tips)
+- [ ] Email marketing for past clients
+
+### Technical Improvements
+- [ ] Optimize page speed (compress images, minify CSS/JS)
+- [ ] Improve Core Web Vitals scores
+- [ ] Add internal linking between pages
+- [ ] Optimize images with descriptive filenames and alt tags
+
+### Content & Engagement
+- [ ] Video content (before/after showcases, tutorials)
+- [ ] Expand portfolio with more case studies
+- [ ] Add live chat or chatbot for instant engagement
 
 ---
 
@@ -49,4 +69,4 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 
 ---
 
-**Last Updated:** 2026-06-01
+**Last Updated:** 2026-06-03

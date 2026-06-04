@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | FreshBuild Web Design | Rochester NY Website Examples</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="canonical" href="https://freshbuild.co/portfolio">
+
+    <meta property="og:title" content="Web Design Portfolio | FreshBuild Rochester NY">
+    <meta property="og:description" content="See examples of affordable website designs by FreshBuild. Before and after transformations for small businesses in Rochester NY.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshbuild.co/portfolio">
+    <meta property="og:image" content="https://freshbuild.co/og-image.svg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web Design Portfolio | FreshBuild Rochester NY">
+    <meta name="twitter:description" content="See examples of affordable website designs. Before and after transformations for small businesses.">
+
+    <meta name="description" content="FreshBuild web design portfolio. See real examples of website redesigns and transformations for small businesses in Rochester NY. Before and after comparisons.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .before-after-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8fffe 0%, #f0fdfa 100%);
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .before-after-container:hover {
+            transform: scale(1.02);
+        }
+        .before-after-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(20, 184, 166, 0.15);
+        }
+        .before-after-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        .before-after-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            display: block;
+        }
+        .before-after-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .before-after-label.before {
+            background: #ef4444;
+            color: white;
+        }
+        .before-after-label.after {
+            background: #14B8A6;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .before-after-container {
+                grid-template-columns: 1fr;
+            }
+            .before-after-item img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav>
+        <a href="./" class="logo">
+            <div class="logo-icon">F</div>
+            <span>Fresh<span class="gradient-text">Build</span></span>
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="./#pricing" class="nav-link">Pricing</a>
+            <a href="portfolio.html" class="nav-link active">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="btn-primary small">Get in Touch</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="./">Home</a>
+                    <span>/</span>
+                    <span>Portfolio</span>
+                </div>
+                <h1>Recent <span class="gradient-text">Work</span></h1>
+                <p>Real website transformations for real small businesses. See the before and after.</p>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="before-after-container">
+                            <div class="before-after-item">
+                                <img src="before.jpg" alt="MDC Assembly website before redesign" width="800" height="532" loading="lazy">
+                                <span class="before-after-label before">Before</span>
+                            </div>
+                            <div class="before-after-item">
+                                <iframe src="https://mdc.dev.freshbuild.co" title="MDC Assembly website after redesign"></iframe>
+                                <span class="before-after-label after">After</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>MDC Assembly LLC</h3>
+                            <p>Multi-page website redesign for a furniture installation company in Ontario, NY. Complete transformation from outdated design to modern, professional site with SEO optimization.</p>
+                            <a href="https://mdc.dev.freshbuild.co" target="_blank" class="btn-secondary" style="margin-top: 8px;">View Live Site</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card placeholder">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder">+</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Your Project Here</h3>
+                            <p>Want to be featured? Let's create something great together.</p>
+                            <a href="contact.html" class="btn-secondary" style="margin-top: 8px;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card placeholder">
+                        <div class="portfolio-image">
+                            <div class="portfolio-placeholder">+</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Coming Soon</h3>
+                            <p>More projects on the way. Check back soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-gray">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">The Difference</p>
+                    <h2 class="section-title">Why a Fresh Website <span class="gradient-text">Matters</span></h2>
+                </div>
+                <div class="services-grid">
+                    <div class="card">
+                        <div class="card-icon">👀</div>
+                        <h3 class="card-title">First Impressions</h3>
+                        <p class="card-text">
+                            Visitors judge your business in seconds. A modern, professional website builds instant trust and credibility.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📱</div>
+                        <h3 class="card-title">Mobile Users</h3>
+                        <p class="card-text">
+                            Over 60% of web traffic is mobile. If your site doesn't work on phones, you're losing customers.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔍</div>
+                        <h3 class="card-title">Google Rankings</h3>
+                        <p class="card-text">
+                            Google favors fast, mobile-friendly sites. A fresh website helps you show up in search results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Website?</h2>
+                <p>Join the growing list of businesses with fresh, modern websites.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Start Your Project</a>
+                    <a href="services.html" class="btn-secondary" style="border-color: white; color: white;">View Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">F</div>
+                        FreshBuild
+                    </div>
+                    <p>Affordable web design for small businesses in Rochester, NY.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="./#pricing">Pricing</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="locations/rochester-ny.html">Rochester, NY</a></li>
+                        <li><a href="locations/buffalo-ny.html">Buffalo, NY</a></li>
+                        <li><a href="locations/syracuse-ny.html">Syracuse, NY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FreshBuild. Crafted with care in Rochester, NY.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

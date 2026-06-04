@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6"/>
+      <stop offset="100%" style="stop-color:#0D9488"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FAFBFC"/>
+
+  <!-- Accent bar at top -->
+  <rect width="1200" height="8" fill="url(#grad)"/>
+
+  <!-- Logo icon -->
+  <rect x="80" y="200" width="80" height="80" rx="16" fill="url(#grad)"/>
+  <text x="120" y="262" font-family="system-ui, sans-serif" font-size="50" font-weight="700" fill="white" text-anchor="middle">F</text>
+
+  <!-- Brand name -->
+  <text x="180" y="260" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#1a2b3c">Fresh</text>
+  <text x="320" y="260" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#14B8A6">Build</text>
+
+  <!-- Tagline -->
+  <text x="80" y="340" font-family="system-ui, sans-serif" font-size="36" fill="#1a2b3c">Website Refresh Services</text>
+
+  <!-- Description -->
+  <text x="80" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#5a6b7c">Transform your outdated website into a modern,</text>
+  <text x="80" y="455" font-family="system-ui, sans-serif" font-size="24" fill="#5a6b7c">mobile-friendly experience. Starting at $179.</text>
+
+  <!-- Location -->
+  <text x="80" y="540" font-family="system-ui, sans-serif" font-size="20" fill="#14B8A6">Rochester, NY</text>
+</svg>

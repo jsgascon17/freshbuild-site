@@ -4,16 +4,22 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 
 ---
 
-## Session: 2026-06-05 - Logo Fixes & Core Web Vitals
+## Session: 2026-06-05 - Logo Fixes, Core Web Vitals & Map Fix
 
 ### What We Did
-1. **Fixed Manufacturer Logo Typos**
+1. **Fixed Main Page Map**
+   - Replaced rough/inaccurate NY state outline on main page with Dad's accurate map from service-areas page
+   - Both pages now have identical, professional NY state map
+   - Rochester now shows as blue HQ marker (matches service-areas page)
+   - Added legend showing "● Headquarters · ● Service area"
+
+2. **Fixed Manufacturer Logo Typos**
    - Renamed `tekion-logo.jpg/webp` → `teknion-logo.jpg/webp`
    - Renamed `hartworth-logo.jpg/webp` → `haworth-logo.jpg/webp`
    - Renamed `veresteel-logo.jpg/webp` → `versteel-logo.jpg/webp`
    - Updated HTML references in `cubicle-installation.html`
 
-2. **Core Web Vitals Improvements (all 15 HTML pages)**
+3. **Core Web Vitals Improvements (all 15 HTML pages)**
    - Moved GA4 script from `<head>` to end of `<body>` (non-render-blocking)
    - Changed logo preloads from JPG to WebP format
    - Added `<picture>` tags with WebP sources for all logos

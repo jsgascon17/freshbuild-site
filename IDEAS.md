@@ -34,7 +34,7 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 ### SEO & Marketing
 - [ ] Google Business Profile optimization
 - [ ] Client reviews & testimonials on Google
-- [ ] Location-specific landing pages (Brighton, Pittsford, Victor, Henrietta, etc.)
+- [x] Location-specific landing pages (Brighton, Pittsford, Victor, Henrietta - 2026-06-05)
 - [ ] Blog/content marketing (how-to articles, web design tips)
 - [ ] Email marketing for past clients
 

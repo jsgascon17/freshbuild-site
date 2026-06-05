@@ -4,7 +4,7 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 
 ---
 
-## Session: 2026-06-05 - Logo Fixes, Core Web Vitals & Map Fix
+## Session: 2026-06-05 - Logo Fixes, Core Web Vitals, Map Fix & Freshbuild Locations
 
 ### What We Did
 1. **Fixed Main Page Map**
@@ -40,6 +40,15 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 - Faster LCP (Largest Contentful Paint) with WebP images and fetchpriority
 - Reduced render-blocking with GA4 at end of body
 - Better image decode performance with decoding="async"
+
+4. **Freshbuild Location Landing Pages (Local SEO)**
+   - Created 4 new suburb landing pages:
+     - `locations/brighton-ny.html`
+     - `locations/pittsford-ny.html`
+     - `locations/victor-ny.html`
+     - `locations/henrietta-ny.html`
+   - Each page includes local SEO optimization, schema markup, and local keyword targeting
+   - Updated footer links across all Freshbuild pages to include new locations
 
 ---
 

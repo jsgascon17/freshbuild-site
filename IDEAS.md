@@ -22,8 +22,9 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 - [ ] Before/after photo social media posts
 
 ### Technical Improvements
-- [ ] Optimize images for faster loading
-- [ ] Add lazy loading for images
+- [x] Optimize images for faster loading (WebP with picture tags - 2026-06-05)
+- [x] Add lazy loading for images (decoding=async added - 2026-06-05)
+- [x] Core Web Vitals improvements (GA4 non-blocking, fetchpriority - 2026-06-05)
 - [ ] Set up Google Analytics goals/conversions
 
 ---
@@ -38,8 +39,8 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 - [ ] Email marketing for past clients
 
 ### Technical Improvements
-- [ ] Optimize page speed (compress images, minify CSS/JS)
-- [ ] Improve Core Web Vitals scores
+- [x] Optimize page speed (decoding=async, lazy iframes - 2026-06-05)
+- [x] Improve Core Web Vitals scores (already well-optimized, minor tweaks - 2026-06-05)
 - [ ] Add internal linking between pages
 - [ ] Optimize images with descriptive filenames and alt tags
 
@@ -69,4 +70,4 @@ A running list of ideas for client projects. Add anything here and we'll tackle 
 
 ---
 
-**Last Updated:** 2026-06-03
+**Last Updated:** 2026-06-05

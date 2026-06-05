@@ -4,6 +4,39 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 
 ---
 
+## Session: 2026-06-05 - Logo Fixes & Core Web Vitals
+
+### What We Did
+1. **Fixed Manufacturer Logo Typos**
+   - Renamed `tekion-logo.jpg/webp` → `teknion-logo.jpg/webp`
+   - Renamed `hartworth-logo.jpg/webp` → `haworth-logo.jpg/webp`
+   - Renamed `veresteel-logo.jpg/webp` → `versteel-logo.jpg/webp`
+   - Updated HTML references in `cubicle-installation.html`
+
+2. **Core Web Vitals Improvements (all 15 HTML pages)**
+   - Moved GA4 script from `<head>` to end of `<body>` (non-render-blocking)
+   - Changed logo preloads from JPG to WebP format
+   - Added `<picture>` tags with WebP sources for all logos
+   - Added `fetchpriority="high"` to nav logos (LCP optimization)
+   - Added `decoding="async"` to footer logos and gallery images
+
+### Files Modified
+- All 8 main pages: index, about, contact, gallery, service-areas, privacy-policy, thank-you, 404
+- All 7 service pages
+- 6 manufacturer logo files renamed
+
+### Technical Details
+- Nav logos now use: `<picture><source srcset="*.webp" type="image/webp"><img fetchpriority="high"></picture>`
+- Footer logos now use: `<picture><source srcset="*.webp" type="image/webp"><img decoding="async"></picture>`
+- GA4 loads after page content, no longer blocks initial render
+
+### Impact
+- Faster LCP (Largest Contentful Paint) with WebP images and fetchpriority
+- Reduced render-blocking with GA4 at end of body
+- Better image decode performance with decoding="async"
+
+---
+
 ## Session: 2026-06-01 - Service Area Map Improvements
 
 ### What We Did
@@ -39,7 +72,7 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 - Other cities: Red dots (#DC2626) with semi-transparent ripples
 
 ### Known Issues / Future Work
-- Manufacturer logo filenames have typos (tekion→teknion, hartworth→haworth, veresteel→versteel)
+- ~~Manufacturer logo filenames have typos~~ (FIXED 2026-06-05)
 - Could add animation to the ripple effects
 - Could make cities clickable with tooltips
 
@@ -89,4 +122,4 @@ Comprehensive notes tracking all work done on the MDC website across sessions.
 
 ---
 
-**Last Updated:** 2026-06-04 10:16:00
+**Last Updated:** 2026-06-05

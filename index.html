@@ -879,6 +879,35 @@
             box-shadow: 0 20px 50px rgba(20, 184, 166, 0.25);
         }
 
+        .pricing-card.elevated {
+            background: linear-gradient(135deg, #feffff 0%, #f0fdfa 100%);
+            box-shadow: 0 12px 40px rgba(20, 184, 166, 0.2);
+            transform: scale(1.02);
+        }
+
+        .pricing-card.elevated:hover {
+            transform: scale(1.02) translateY(-8px);
+            box-shadow: 0 24px 60px rgba(20, 184, 166, 0.3);
+        }
+
+        .pricing-card.elevated .btn-primary {
+            padding: 18px 32px;
+            font-size: 17px;
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
+        }
+
+        .pricing-callout {
+            text-align: center;
+            color: #5a6b7c;
+            font-size: 14px;
+            font-style: italic;
+            margin: 40px auto 0;
+            padding: 16px 24px;
+            max-width: 600px;
+            border-top: 1px solid rgba(20, 184, 166, 0.15);
+            border-bottom: 1px solid rgba(20, 184, 166, 0.15);
+        }
+
         .pricing-badge {
             position: absolute;
             top: -14px;
@@ -1942,44 +1971,57 @@
                     </div>
                     <a href="#contact" class="btn-secondary">Get Started</a>
                 </div>
-                <div class="pricing-card popular">
-                    <span class="pricing-badge">Most Popular</span>
+                <div class="pricing-card">
                     <div class="pricing-header">
                         <h3 class="pricing-name">Single-Page Website</h3>
                         <p class="pricing-price">$299</p>
                     </div>
                     <ul class="pricing-features">
-                        <li>Complete scrolling website</li>
-                        <li>Multiple sections (About, Services, Contact, etc.)</li>
+                        <li>One scrolling page with up to 5 sections (Hero, About, Services, Testimonials, Contact)</li>
                         <li>Mobile-responsive design</li>
                         <li>Contact form</li>
+                        <li>Basic on-page SEO (meta title, description, alt text)</li>
                         <li>2 rounds of revisions</li>
-                        <li>1-2 week turnaround</li>
+                        <li>1–2 week turnaround</li>
+                        <li>1 month of post-launch email support</li>
                     </ul>
                     <div class="pricing-best-for">
                         <p class="pricing-best-for-label">Best for</p>
-                        <p class="pricing-best-for-text">Small businesses wanting a full site on one page</p>
+                        <p class="pricing-best-for-text">Small businesses wanting a clean, professional single page</p>
                     </div>
-                    <a href="#contact" class="btn-primary">Get Started</a>
+                    <a href="#contact" class="btn-secondary">Get Started</a>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card popular elevated">
+                    <span class="pricing-badge">Most Popular</span>
                     <div class="pricing-header">
                         <h3 class="pricing-name">Multi-Page Website</h3>
                         <p class="pricing-price">$999</p>
                     </div>
                     <ul class="pricing-features">
-                        <li>Up to 8 separate pages</li>
-                        <li>SEO optimization included</li>
-                        <li>Mobile-responsive</li>
-                        <li>Contact form setup</li>
-                        <li>1 month of revisions</li>
+                        <li>Up to 8 separate pages (Home, About, Services, Team, FAQ, Blog, Portfolio, Contact)</li>
+                        <li>Custom page layouts — each page designed individually, not templated</li>
+                        <li>Mobile-responsive across all pages</li>
+                        <li>Full SEO package (keyword research, meta tags, sitemap, Google Search Console setup)</li>
+                        <li>Speed optimization (compressed images, clean code, fast load times)</li>
+                        <li>Contact form + optional lead capture integration</li>
+                        <li>Google Analytics setup</li>
+                        <li>3 rounds of revisions</li>
+                        <li>2–4 week turnaround</li>
+                        <li>3 months of post-launch email support</li>
+                        <li>1 free hour of changes after launch</li>
                     </ul>
                     <div class="pricing-best-for">
                         <p class="pricing-best-for-label">Best for</p>
-                        <p class="pricing-best-for-text">Businesses needing multiple pages & SEO</p>
+                        <p class="pricing-best-for-text">Businesses ready for a full strategic web presence</p>
                     </div>
-                    <a href="#contact" class="btn-secondary">Get Started</a>
+                    <a href="#contact" class="btn-primary">Get Started</a>
                 </div>
+            </div>
+
+            <!-- Comparison Callout -->
+            <p class="pricing-callout">Need more than one page? The Multi-Page package includes everything above, plus full SEO, analytics, and 3 months of support.</p>
+
+            <div class="pricing-grid" style="margin-top: 30px;">
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3 class="pricing-name">Custom Design</h3>

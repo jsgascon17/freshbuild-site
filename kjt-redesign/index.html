@@ -1,15 +1,16 @@
-<!-- Redesigned by Claude for KJT Group — 2026 -->
+<!-- KJT Group Redesign 2026 — built with Claude Code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KJT Group | Healthcare Consulting, Insights & Medical Communications</title>
-    <meta name="description" content="KJT Group is a healthcare consulting, insights, and medical communications agency with 20+ years of life sciences expertise. Taking research further, together.">
+    <meta name="description" content="KJT Group partners with life sciences companies throughout the product lifecycle — generating insights and medical communications that improve healthcare globally.">
     <meta property="og:title" content="KJT Group | Healthcare Consulting, Insights & Medical Communications">
-    <meta property="og:description" content="Taking research further, together. Healthcare consulting and insights with 100% life sciences focus.">
-    <meta property="og:image" content="https://kjtgroup.com/og-image.jpg">
+    <meta property="og:description" content="Taking research further. Together. Healthcare consulting and insights with 100% life sciences focus.">
+    <meta property="og:image" content="https://kjtgroup.com/wp-content/uploads/2024/10/ZII_5923-3000x855.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kjtgroup.com">
     <link rel="canonical" href="https://kjtgroup.com">
     <style>
         *, *::before, *::after {
@@ -20,15 +21,15 @@
 
         :root {
             --green-primary: #0F6E56;
-            --green-light: #E1F5EE;
-            --green-forest: #04342C;
+            --dark-forest: #0d1f10;
+            --mint-bg: #f7faf8;
+            --mint-tag: #E8F3EE;
+            --orange-accent: #C95F1A;
+            --orange-light: #FDF0E8;
+            --orange-mid: #E8854A;
+            --card-border: #ddeae0;
+            --text-body: #4a5c4d;
             --white: #ffffff;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-400: #9ca3af;
-            --gray-600: #4b5563;
-            --gray-800: #1f2937;
             --gray-900: #111827;
         }
 
@@ -37,47 +38,74 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-weight: 400;
             line-height: 1.6;
-            color: var(--gray-800);
+            color: var(--text-body);
             background: var(--white);
         }
 
-        /* Navigation */
+        h1, h2, h3, .serif {
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: -1.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== NAVIGATION ===== */
         .nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1rem 1.5rem;
-            transition: background 0.3s ease, backdrop-filter 0.3s ease;
+            height: 72px;
+            background: var(--white);
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            align-items: center;
+            transition: box-shadow 0.3s ease;
         }
 
         .nav.scrolled {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 0.5px solid var(--gray-200);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--gray-900);
-            text-decoration: none;
+            font-weight: 700;
+            color: var(--dark-forest);
+            letter-spacing: -1px;
         }
 
         .logo span {
             color: var(--green-primary);
+            font-weight: 700;
         }
 
         .nav-links {
@@ -88,26 +116,25 @@
         }
 
         .nav-links a {
-            color: var(--gray-600);
-            text-decoration: none;
             font-size: 0.9375rem;
-            transition: color 0.2s ease;
+            color: var(--text-body);
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
             color: var(--green-primary);
         }
 
-        .nav-links .btn-contact {
+        .btn-nav-contact {
             background: var(--green-primary);
-            color: var(--white);
-            padding: 0.625rem 1.25rem;
-            border-radius: 50px;
+            color: var(--white) !important;
+            padding: 0.625rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 500;
         }
 
-        .nav-links .btn-contact:hover {
-            background: var(--green-forest);
-            color: var(--white);
+        .btn-nav-contact:hover {
+            background: var(--dark-forest);
         }
 
         .hamburger {
@@ -117,14 +144,14 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 8px;
         }
 
         .hamburger span {
             width: 24px;
             height: 2px;
-            background: var(--gray-800);
-            transition: all 0.3s ease;
+            background: var(--dark-forest);
+            transition: all 0.3s;
         }
 
         .mobile-menu {
@@ -136,7 +163,7 @@
             bottom: 0;
             background: var(--white);
             z-index: 999;
-            padding: 5rem 2rem 2rem;
+            padding: 80px 24px 24px;
         }
 
         .mobile-menu.active {
@@ -152,28 +179,18 @@
 
         .mobile-menu a {
             font-size: 1.25rem;
-            color: var(--gray-800);
-            text-decoration: none;
-        }
-
-        .mobile-menu .btn-contact {
-            display: inline-block;
-            background: var(--green-primary);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            margin-top: 1rem;
+            color: var(--dark-forest);
         }
 
         .close-menu {
             position: absolute;
-            top: 1rem;
-            right: 1.5rem;
+            top: 20px;
+            right: 24px;
             background: none;
             border: none;
             font-size: 2rem;
             cursor: pointer;
-            color: var(--gray-600);
+            color: var(--text-body);
         }
 
         @media (min-width: 1024px) {
@@ -185,39 +202,35 @@
             }
         }
 
-        /* Hero */
+        /* ===== HERO ===== */
         .hero {
-            min-height: 100vh;
-            padding: 8rem 1.5rem 4rem;
-            background: linear-gradient(135deg, var(--white) 0%, var(--green-light) 100%);
-            display: flex;
-            align-items: center;
+            padding: 120px 0 60px;
+            background: var(--white);
         }
 
         .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
-            gap: 3rem;
+            gap: 48px;
+            align-items: center;
         }
 
-        .hero-eyebrow {
+        .hero-tag {
             display: inline-block;
-            background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+            background: var(--mint-tag);
+            color: var(--green-primary);
+            padding: 8px 16px;
+            border-radius: 100px;
             font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 24px;
         }
 
         .hero h1 {
             font-size: 2.5rem;
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--gray-900);
-            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            line-height: 1.15;
+            margin-bottom: 24px;
         }
 
         .hero h1 em {
@@ -227,81 +240,83 @@
 
         .hero-desc {
             font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-            max-width: 500px;
+            color: var(--text-body);
+            margin-bottom: 32px;
+            max-width: 520px;
+            line-height: 1.7;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 12px;
         }
 
         .btn-primary {
             background: var(--green-primary);
             color: var(--white);
-            padding: 0.875rem 1.75rem;
-            border-radius: 8px;
-            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 100px;
             font-weight: 500;
-            transition: background 0.2s ease;
+            font-size: 0.9375rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
-            background: var(--green-forest);
+            background: var(--dark-forest);
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
-            background: var(--white);
-            color: var(--gray-800);
-            padding: 0.875rem 1.75rem;
-            border-radius: 8px;
-            border: 0.5px solid var(--gray-200);
-            text-decoration: none;
+            background: var(--orange-accent);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 100px;
             font-weight: 500;
-            transition: border-color 0.2s ease;
+            font-size: 0.9375rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-secondary:hover {
-            border-color: var(--green-primary);
+            background: var(--orange-mid);
+            transform: translateY(-1px);
         }
 
-        .hero-stats {
-            background: var(--white);
-            border-radius: 16px;
-            border: 0.5px solid var(--gray-200);
-            padding: 2rem;
-        }
-
-        .stats-grid {
+        .hero-mosaic {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            grid-template-rows: 1fr 1fr;
+            gap: 12px;
+            height: 360px;
         }
 
-        .stat-item {
-            text-align: center;
+        .mosaic-left {
+            grid-row: 1 / 3;
+            border-radius: 18px;
+            overflow: hidden;
         }
 
-        .stat-value {
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--green-primary);
+        .mosaic-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--gray-600);
+        .mosaic-right-top,
+        .mosaic-right-bottom {
+            border-radius: 18px;
+            overflow: hidden;
         }
 
-        .trust-bar {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 0.5px solid var(--gray-200);
-            font-size: 0.875rem;
-            color: var(--gray-600);
+        .mosaic-right-top img,
+        .mosaic-right-bottom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         @media (min-width: 640px) {
@@ -313,339 +328,631 @@
         @media (min-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr 1fr;
-                align-items: center;
             }
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 3.25rem;
             }
         }
 
-        /* Expertise Strip */
-        .expertise-strip {
-            background: var(--gray-50);
-            padding: 1.5rem;
-            border-top: 0.5px solid var(--gray-200);
-            border-bottom: 0.5px solid var(--gray-200);
+        /* ===== NEWS STRIP ===== */
+        .news-strip {
+            background: var(--orange-light);
+            border-left: 4px solid var(--orange-accent);
+            padding: 16px 24px;
         }
 
-        .expertise-container {
+        .news-strip-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .expertise-label {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-right: 0.5rem;
+        .news-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--orange-accent);
+            border-radius: 50%;
+            flex-shrink: 0;
         }
 
-        .expertise-pill {
-            background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            color: var(--gray-800);
+        .news-strip p {
+            font-size: 0.9375rem;
+            color: var(--dark-forest);
         }
 
-        /* Solutions Grid */
-        .solutions {
-            padding: 5rem 1.5rem;
+        .news-strip a {
+            color: var(--orange-accent);
+            font-weight: 600;
         }
 
-        .solutions-container {
+        .news-strip a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: var(--dark-forest);
+            padding: 32px 24px;
+        }
+
+        .stats-bar-container {
             max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .stat-item {
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .stat-item:not(:last-child) {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 24px;
+        }
+
+        .stat-value {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .stat-value .highlight {
+            color: var(--orange-mid);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+        }
+
+        .stat-industries {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .stats-bar-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0;
+            }
+            .stat-item {
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+            }
+            .stat-item:not(:last-child) {
+                border-right: 1px solid rgba(255,255,255,0.15);
+            }
+        }
+
+        /* ===== INTRO SPLIT ===== */
+        .intro-split {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .intro-container {
+            display: grid;
+            gap: 48px;
+        }
+
+        .intro-quote {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: var(--dark-forest);
+            letter-spacing: -0.5px;
+        }
+
+        .intro-quote em {
+            color: var(--green-primary);
+            font-style: italic;
+        }
+
+        .intro-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .link-arrow {
+            color: var(--green-primary);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+
+        .link-arrow:hover {
+            gap: 10px;
+        }
+
+        @media (min-width: 1024px) {
+            .intro-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+            .intro-quote {
+                font-size: 1.625rem;
+            }
+        }
+
+        /* ===== SOLUTIONS GRID ===== */
+        .solutions {
+            padding: 80px 0;
+            background: var(--mint-bg);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 48px;
         }
 
-        .section-eyebrow {
-            font-size: 0.875rem;
+        .section-tag {
+            display: inline-block;
+            background: var(--mint-tag);
             color: var(--green-primary);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
         }
 
         .section-title {
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 2rem;
-            font-weight: 500;
-            color: var(--gray-900);
+            font-weight: 700;
+            color: var(--dark-forest);
+            letter-spacing: -1.5px;
         }
 
         .solutions-grid {
             display: grid;
-            gap: 1.5rem;
+            gap: 24px;
         }
 
         .solution-card {
             background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: border-color 0.2s ease;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.2s;
+            position: relative;
         }
 
         .solution-card:hover {
             border-color: var(--green-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 110, 86, 0.08);
+        }
+
+        .solution-card.orange:hover {
+            border-color: var(--orange-accent);
+            box-shadow: 0 8px 24px rgba(201, 95, 26, 0.08);
+        }
+
+        .solution-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--mint-tag);
+            color: var(--green-primary);
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .solution-badge.orange {
+            background: var(--orange-light);
+            color: var(--orange-accent);
         }
 
         .solution-number {
             font-size: 0.75rem;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
+            color: var(--text-body);
+            opacity: 0.6;
+            margin-bottom: 12px;
         }
 
         .solution-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            background: var(--mint-tag);
+        }
+
+        .solution-icon.orange {
+            background: var(--orange-light);
         }
 
         .solution-title {
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--gray-900);
-            margin-bottom: 0.75rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
         .solution-desc {
             font-size: 0.9375rem;
-            color: var(--gray-600);
-            margin-bottom: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
         }
 
         .solution-link {
             color: var(--green-primary);
-            text-decoration: none;
-            font-size: 0.9375rem;
             font-weight: 500;
+            font-size: 0.9375rem;
+        }
+
+        .solution-link.orange {
+            color: var(--orange-accent);
         }
 
         .solution-link:hover {
             text-decoration: underline;
         }
 
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             .solutions-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .section-title {
+                font-size: 2.5rem;
             }
         }
 
-        /* BRAIN Framework */
-        .brain-section {
-            background: var(--gray-50);
-            padding: 5rem 1.5rem;
+        /* ===== HOLISTIC APPROACH ===== */
+        .holistic {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .holistic-container {
+            display: grid;
+            gap: 48px;
+        }
+
+        .holistic-image {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 320px;
+        }
+
+        .holistic-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .holistic-content .section-tag {
+            margin-bottom: 16px;
+        }
+
+        .holistic-content h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 32px;
+            letter-spacing: -1.5px;
+        }
+
+        .holistic-item {
+            padding: 24px 0;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .holistic-item:last-child {
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .holistic-item-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .holistic-num {
+            font-size: 0.875rem;
+            color: var(--green-primary);
+            font-weight: 600;
+        }
+
+        .holistic-item h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            letter-spacing: -0.5px;
+        }
+
+        .holistic-item p {
+            font-size: 0.9375rem;
+            margin-bottom: 12px;
+            padding-left: 40px;
+        }
+
+        .holistic-item .link-arrow {
+            padding-left: 40px;
+            font-size: 0.9375rem;
+        }
+
+        @media (min-width: 1024px) {
+            .holistic-container {
+                grid-template-columns: 400px 1fr;
+                gap: 80px;
+            }
+            .holistic-image {
+                height: 480px;
+            }
+            .holistic-content h2 {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* ===== BRAIN FRAMEWORK ===== */
+        .brain {
+            padding: 80px 0;
+            background: var(--mint-bg);
         }
 
         .brain-container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
-            gap: 3rem;
+            gap: 48px;
         }
 
-        .brain-left .section-eyebrow {
-            text-align: left;
-        }
-
-        .brain-title {
+        .brain-left h2 {
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 2rem;
-            font-weight: 500;
-            color: var(--gray-900);
-            margin-bottom: 2rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
         }
 
-        .brain-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+        .brain-left h2 .green {
+            color: var(--green-primary);
         }
 
-        .brain-pill {
-            background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            padding: 0.625rem 1.25rem;
-            border-radius: 50px;
+        .brain-left h2 .orange {
+            color: var(--orange-accent);
+        }
+
+        .brain-left > p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .brain-highlight {
+            background: var(--orange-light);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 32px;
+            border-left: 4px solid var(--orange-accent);
+        }
+
+        .brain-highlight-stat {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--orange-accent);
+            letter-spacing: -1px;
+        }
+
+        .brain-highlight p {
             font-size: 0.9375rem;
-            color: var(--gray-600);
-            cursor: pointer;
-            transition: all 0.2s ease;
+            color: var(--dark-forest);
+            margin-top: 8px;
         }
 
-        .brain-pill:hover,
-        .brain-pill.active {
-            background: var(--green-primary);
-            color: var(--white);
-            border-color: var(--green-primary);
-        }
-
-        .brain-cards {
+        .brain-steps {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
         }
 
-        .brain-card {
-            background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 1.5rem;
+        .brain-step {
+            display: flex;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--card-border);
         }
 
-        .brain-card-title {
-            font-weight: 500;
-            color: var(--gray-900);
-            margin-bottom: 0.5rem;
+        .brain-step:first-child {
+            border-top: 1px solid var(--card-border);
         }
 
-        .brain-card-desc {
+        .brain-letter {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            width: 48px;
+            flex-shrink: 0;
+            letter-spacing: -1px;
+        }
+
+        .brain-letter.green {
+            color: var(--green-primary);
+        }
+
+        .brain-letter.orange {
+            color: var(--orange-accent);
+        }
+
+        .brain-step-content h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .brain-step-content p {
             font-size: 0.9375rem;
-            color: var(--gray-600);
+            line-height: 1.6;
         }
 
         @media (min-width: 1024px) {
             .brain-container {
                 grid-template-columns: 1fr 1fr;
-                align-items: start;
+                gap: 80px;
+            }
+            .brain-left h2 {
+                font-size: 2.5rem;
             }
         }
 
-        /* Case Studies */
+        /* ===== CASE STUDIES ===== */
         .case-studies {
-            padding: 5rem 1.5rem;
+            padding: 80px 0;
+            background: var(--mint-bg);
         }
 
-        .case-studies-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .case-studies-grid {
+        .cases-grid {
             display: grid;
-            gap: 1.5rem;
+            gap: 24px;
         }
 
         .case-card {
             background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: border-color 0.2s ease;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            transition: all 0.2s;
         }
 
         .case-card:hover {
             border-color: var(--green-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 110, 86, 0.08);
+        }
+
+        .case-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .case-tag {
-            display: inline-block;
-            background: var(--green-light);
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--mint-tag);
             color: var(--green-primary);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
+            padding: 6px 12px;
+            border-radius: 100px;
             font-size: 0.75rem;
-            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .case-content {
+            padding: 24px;
         }
 
         .case-title {
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 1.125rem;
-            font-weight: 500;
-            color: var(--gray-900);
-            margin-bottom: 0.75rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 16px;
             line-height: 1.4;
-        }
-
-        .case-desc {
-            font-size: 0.9375rem;
-            color: var(--gray-600);
-            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
         }
 
         .case-link {
             color: var(--green-primary);
-            text-decoration: none;
-            font-size: 0.9375rem;
             font-weight: 500;
+            font-size: 0.9375rem;
         }
 
         .case-link:hover {
             text-decoration: underline;
         }
 
-        @media (min-width: 1024px) {
-            .case-studies-grid {
+        @media (min-width: 768px) {
+            .cases-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        /* Team Section */
+        /* ===== TEAM ===== */
         .team {
-            padding: 5rem 1.5rem;
-            background: var(--gray-50);
-        }
-
-        .team-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 80px 0;
+            background: var(--white);
         }
 
         .team-grid {
             display: grid;
-            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
         }
 
         .team-card {
             background: var(--white);
-            border: 0.5px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 2rem;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 32px 24px;
             text-align: center;
-            transition: border-color 0.2s ease;
+            transition: all 0.2s;
         }
 
         .team-card:hover {
             border-color: var(--green-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 110, 86, 0.08);
         }
 
-        .team-avatar {
+        .team-photo {
             width: 80px;
             height: 80px;
-            background: var(--green-light);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--green-primary);
+            object-fit: cover;
+            object-position: top;
+            margin: 0 auto 16px;
+            border: 3px solid var(--mint-tag);
         }
 
         .team-name {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: var(--gray-900);
-            margin-bottom: 0.25rem;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
         }
 
         .team-role {
             font-size: 0.875rem;
-            color: var(--gray-600);
-        }
-
-        @media (min-width: 640px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            color: var(--text-body);
         }
 
         @media (min-width: 1024px) {
@@ -654,57 +961,180 @@
             }
         }
 
-        /* CTA Block */
-        .cta-block {
-            background: var(--green-forest);
-            padding: 5rem 1.5rem;
-            text-align: center;
-        }
-
-        .cta-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-subtitle {
-            font-size: 1.125rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-        }
-
-        .btn-white {
-            display: inline-block;
+        /* ===== BLOG ===== */
+        .blog {
+            padding: 80px 0;
             background: var(--white);
-            color: var(--green-forest);
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
+        }
+
+        .blog-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            transition: all 0.2s;
+        }
+
+        .blog-card:hover {
+            border-color: var(--green-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 110, 86, 0.08);
+        }
+
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 24px;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: var(--mint-tag);
+            color: var(--green-primary);
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 0.75rem;
             font-weight: 500;
-            transition: opacity 0.2s ease;
+            margin-bottom: 12px;
         }
 
-        .btn-white:hover {
-            opacity: 0.9;
+        .blog-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--dark-forest);
+            margin-bottom: 8px;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
         }
 
-        @media (min-width: 640px) {
-            .cta-title {
-                font-size: 2.5rem;
+        .blog-date {
+            font-size: 0.8125rem;
+            color: var(--text-body);
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+
+        .blog-link {
+            color: var(--green-primary);
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        /* Footer */
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            position: relative;
+            background-image: url('https://kjtgroup.com/wp-content/uploads/2024/10/ZII_5923-3000x855.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 24px;
+        }
+
+        .cta-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(13, 31, 16, 0.82);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+            letter-spacing: -1.5px;
+        }
+
+        .cta-content p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-cta-primary {
+            background: var(--orange-accent);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: all 0.2s;
+        }
+
+        .btn-cta-primary:hover {
+            background: var(--orange-mid);
+            transform: translateY(-1px);
+        }
+
+        .btn-cta-ghost {
+            background: transparent;
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.2s;
+        }
+
+        .btn-cta-ghost:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .cta-content h2 {
+                font-size: 2.75rem;
+            }
+        }
+
+        /* ===== FOOTER ===== */
         .footer {
-            background: var(--gray-900);
-            color: var(--gray-400);
-            padding: 4rem 1.5rem 2rem;
+            background: var(--dark-forest);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 64px 24px 32px;
         }
 
         .footer-container {
@@ -714,14 +1144,26 @@
 
         .footer-grid {
             display: grid;
-            gap: 2rem;
-            margin-bottom: 3rem;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .footer-brand p {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            max-width: 280px;
         }
 
         .footer-col h4 {
             color: var(--white);
-            font-weight: 500;
-            margin-bottom: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
             font-size: 0.9375rem;
         }
 
@@ -729,50 +1171,36 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 12px;
         }
 
         .footer-col a {
-            color: var(--gray-400);
-            text-decoration: none;
             font-size: 0.875rem;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
 
         .footer-col a:hover {
             color: var(--white);
         }
 
-        .newsletter {
-            margin-bottom: 3rem;
-        }
-
-        .newsletter h4 {
-            color: var(--white);
-            font-weight: 500;
-            margin-bottom: 1rem;
-            font-size: 0.9375rem;
-        }
-
         .newsletter-form {
             display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
         }
 
         .newsletter-input {
             flex: 1;
-            min-width: 200px;
-            padding: 0.75rem 1rem;
-            border: 0.5px solid var(--gray-600);
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             background: transparent;
             color: var(--white);
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
         }
 
         .newsletter-input::placeholder {
-            color: var(--gray-400);
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .newsletter-input:focus {
@@ -783,39 +1211,37 @@
         .newsletter-btn {
             background: var(--green-primary);
             color: var(--white);
-            padding: 0.75rem 1.5rem;
+            padding: 12px 20px;
             border: none;
             border-radius: 8px;
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             font-weight: 500;
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: background 0.2s;
         }
 
         .newsletter-btn:hover {
-            background: var(--green-forest);
+            background: #0a5a46;
         }
 
         .footer-bottom {
-            padding-top: 2rem;
-            border-top: 0.5px solid var(--gray-800);
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 1rem;
+            gap: 16px;
         }
 
         .footer-legal {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 24px;
         }
 
         .footer-legal a {
-            color: var(--gray-400);
-            text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
         }
 
         .footer-legal a:hover {
@@ -823,18 +1249,12 @@
         }
 
         .footer-copyright {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
         }
 
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
             }
         }
     </style>
@@ -848,8 +1268,8 @@
                 <li><a href="#expertise">Healthcare expertise</a></li>
                 <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#team">About us</a></li>
-                <li><a href="#case-studies">Resources</a></li>
-                <li><a href="#contact" class="btn-contact">Contact us</a></li>
+                <li><a href="#blog">Resources</a></li>
+                <li><a href="#contact" class="btn-nav-contact">Contact us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Open menu">
                 <span></span>
@@ -866,120 +1286,206 @@
             <li><a href="#expertise">Healthcare expertise</a></li>
             <li><a href="#solutions">Solutions</a></li>
             <li><a href="#team">About us</a></li>
-            <li><a href="#case-studies">Resources</a></li>
-            <li><a href="#contact" class="btn-contact">Contact us</a></li>
+            <li><a href="#blog">Resources</a></li>
+            <li><a href="#contact">Contact us</a></li>
         </ul>
     </div>
 
     <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-container">
+    <section class="hero">
+        <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-eyebrow">Healthcare Consulting & Insights</span>
+                <span class="hero-tag">Healthcare Consulting & Insights</span>
                 <h1>Taking research <em>further</em>. Together.</h1>
-                <p class="hero-desc">We partner with life sciences companies to transform complex healthcare challenges into actionable insights that drive better patient outcomes.</p>
+                <p class="hero-desc">KJT partners with life sciences companies throughout the product lifecycle — generating insights and medical communications that improve healthcare globally.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">Get started</a>
                     <a href="#case-studies" class="btn-secondary">View case studies</a>
                 </div>
             </div>
-            <div class="hero-stats">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value">20+</div>
-                        <div class="stat-label">Years</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">Life sciences focus</div>
-                    </div>
+            <div class="hero-mosaic">
+                <div class="mosaic-left">
+                    <img src="https://kjtgroup.com/wp-content/uploads/2024/09/shutterstock_2433686735-600x400.jpg" alt="Laboratory research environment with scientific equipment" loading="lazy">
                 </div>
-                <div class="trust-bar">
-                    Employee-owned · Strategic partner · Global reach
+                <div class="mosaic-right-top">
+                    <img src="https://kjtgroup.com/wp-content/uploads/2024/09/pexels-chokniti-khongchum-1197604-3938022-1-600x401.jpg" alt="Scientist examining samples in laboratory" loading="lazy">
+                </div>
+                <div class="mosaic-right-bottom">
+                    <img src="https://kjtgroup.com/wp-content/uploads/2024/09/pexels-karolina-grabowska-7195110-1-600x900.jpg" alt="Healthcare professional in clinical setting" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expertise Strip -->
-    <section class="expertise-strip" id="expertise">
-        <div class="expertise-container">
-            <span class="expertise-label">Trusted across:</span>
-            <span class="expertise-pill">Pharmaceutical</span>
-            <span class="expertise-pill">Biotech</span>
-            <span class="expertise-pill">Medtech</span>
-            <span class="expertise-pill">Rare disease</span>
-            <span class="expertise-pill">Real world evidence</span>
+    <!-- News Strip -->
+    <div class="news-strip">
+        <div class="news-strip-container">
+            <span class="news-dot"></span>
+            <p><strong>New:</strong> KJT announces integration of Sparq's Connection and Prediction capabilities — <a href="#">Read more &rarr;</a></p>
+        </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-bar-container">
+            <div class="stat-item">
+                <div class="stat-value">20<span class="highlight">+</span></div>
+                <div class="stat-label">Years of experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100<span class="highlight">%</span></div>
+                <div class="stat-label">Life sciences focus</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-industries">Pharma · Biotech · Medtech · Rare disease</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-industries">Employee-owned</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Split -->
+    <section class="intro-split" id="expertise">
+        <div class="container intro-container">
+            <div class="intro-quote serif">
+                "As a strategic partner to life sciences companies throughout the product lifecycle, our goal is profound: <em>positively impact your business</em> to help improve healthcare globally."
+            </div>
+            <div class="intro-text">
+                <p>For over two decades, KJT Group has been at the forefront of healthcare consulting. Our team of experts brings deep therapeutic knowledge, innovative methodologies, and a commitment to delivering actionable insights that drive real-world outcomes.</p>
+                <p>We understand that every research challenge is unique. That's why we combine rigorous scientific approaches with creative thinking to uncover the insights that matter most to your business.</p>
+                <a href="#" class="link-arrow">Learn about our approach &rarr;</a>
+            </div>
         </div>
     </section>
 
     <!-- Solutions Grid -->
     <section class="solutions" id="solutions">
-        <div class="solutions-container">
+        <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">What we do</p>
+                <span class="section-tag">What We Do</span>
                 <h2 class="section-title">Solutions built for healthcare</h2>
             </div>
             <div class="solutions-grid">
                 <div class="solution-card">
                     <div class="solution-number">01</div>
                     <div class="solution-icon">📊</div>
-                    <h3 class="solution-title">Commercial solutions</h3>
-                    <p class="solution-desc">Strategic market research and competitive intelligence to support product launches and lifecycle management. We help you understand your market landscape.</p>
-                    <a href="#" class="solution-link">Learn more →</a>
+                    <h3 class="solution-title">Commercial Solutions</h3>
+                    <p class="solution-desc">Strategic market research and competitive intelligence to support product launches and lifecycle management. Understand your market landscape with confidence.</p>
+                    <a href="#" class="solution-link">Learn more &rarr;</a>
                 </div>
                 <div class="solution-card">
                     <div class="solution-number">02</div>
                     <div class="solution-icon">🔬</div>
-                    <h3 class="solution-title">Medical affairs solutions</h3>
+                    <h3 class="solution-title">Medical Affairs Solutions</h3>
                     <p class="solution-desc">Evidence generation and medical communications that bridge clinical data with real-world practice. Support your medical teams with actionable insights.</p>
-                    <a href="#" class="solution-link">Learn more →</a>
+                    <a href="#" class="solution-link">Learn more &rarr;</a>
                 </div>
-                <div class="solution-card">
+                <div class="solution-card orange">
+                    <span class="solution-badge orange">Proprietary</span>
                     <div class="solution-number">03</div>
-                    <div class="solution-icon">🔗</div>
+                    <div class="solution-icon orange">🔗</div>
                     <h3 class="solution-title">Connection</h3>
                     <p class="solution-desc">Stakeholder engagement and advisory boards that create meaningful dialogue between your teams and key opinion leaders. Build lasting relationships.</p>
-                    <a href="#" class="solution-link">Learn more →</a>
+                    <a href="#" class="solution-link orange">Learn more &rarr;</a>
                 </div>
-                <div class="solution-card">
+                <div class="solution-card orange">
+                    <span class="solution-badge orange">AI-powered</span>
                     <div class="solution-number">04</div>
-                    <div class="solution-icon">📈</div>
+                    <div class="solution-icon orange">📈</div>
                     <h3 class="solution-title">Prediction</h3>
                     <p class="solution-desc">Advanced analytics and forecasting models that anticipate market dynamics and patient needs. Make confident decisions backed by data.</p>
-                    <a href="#" class="solution-link">Learn more →</a>
+                    <a href="#" class="solution-link orange">Learn more &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holistic Approach -->
+    <section class="holistic">
+        <div class="container holistic-container">
+            <div class="holistic-image">
+                <img src="https://kjtgroup.com/wp-content/uploads/2024/09/ZII_5708-1024x1365.jpg" alt="KJT Group team member in professional setting" loading="lazy">
+            </div>
+            <div class="holistic-content">
+                <span class="section-tag">Our Approach</span>
+                <h2>Healthcare Consulting with a Holistic Approach</h2>
+                <div class="holistic-item">
+                    <div class="holistic-item-header">
+                        <span class="holistic-num">01</span>
+                        <h3>Healthcare Expertise</h3>
+                    </div>
+                    <p>Deep therapeutic knowledge across oncology, immunology, rare disease, and more — ensuring insights that reflect clinical reality.</p>
+                    <a href="#" class="link-arrow">Learn More &rarr;</a>
+                </div>
+                <div class="holistic-item">
+                    <div class="holistic-item-header">
+                        <span class="holistic-num">02</span>
+                        <h3>Insight by Design Process</h3>
+                    </div>
+                    <p>Our proprietary BRAIN Framework ensures every project delivers actionable, strategic insights tailored to your objectives.</p>
+                    <a href="#" class="link-arrow">Learn More &rarr;</a>
+                </div>
+                <div class="holistic-item">
+                    <div class="holistic-item-header">
+                        <span class="holistic-num">03</span>
+                        <h3>Strategic Partnership</h3>
+                    </div>
+                    <p>We become an extension of your team, providing ongoing collaboration and support throughout the research journey.</p>
+                    <a href="#" class="link-arrow">Learn More &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- BRAIN Framework -->
-    <section class="brain-section" id="brain">
-        <div class="brain-container">
+    <section class="brain">
+        <div class="container brain-container">
             <div class="brain-left">
-                <p class="section-eyebrow">Insight by design</p>
-                <h2 class="brain-title">The BRAIN Framework™</h2>
-                <div class="brain-pills">
-                    <button class="brain-pill active" data-brain="background">Background</button>
-                    <button class="brain-pill" data-brain="research">Research</button>
-                    <button class="brain-pill" data-brain="analysis">Analysis</button>
-                    <button class="brain-pill" data-brain="interpretation">Interpretation</button>
-                    <button class="brain-pill" data-brain="narrative">Narrative</button>
+                <h2>The <span class="green">B</span><span class="green">R</span><span class="green">A</span><span class="orange">I</span><span class="orange">N</span> Framework™</h2>
+                <p>Our proprietary methodology ensures every research project delivers insights that drive strategic action. From background understanding to narrative delivery, BRAIN guides our approach at every step.</p>
+                <a href="#" class="btn-primary">Explore the framework</a>
+                <div class="brain-highlight">
+                    <div class="brain-highlight-stat">3×</div>
+                    <p>Clients report faster time-to-insight using BRAIN vs traditional approaches</p>
                 </div>
             </div>
             <div class="brain-right">
-                <div class="brain-cards" id="brain-content">
-                    <div class="brain-card">
-                        <h4 class="brain-card-title">Understanding context</h4>
-                        <p class="brain-card-desc">We start by deeply understanding your business context, therapeutic area, and strategic objectives.</p>
+                <div class="brain-steps">
+                    <div class="brain-step">
+                        <span class="brain-letter green">B</span>
+                        <div class="brain-step-content">
+                            <h3>Background</h3>
+                            <p>Deep understanding of your business context, therapeutic area, and strategic objectives.</p>
+                        </div>
                     </div>
-                    <div class="brain-card">
-                        <h4 class="brain-card-title">Stakeholder landscape</h4>
-                        <p class="brain-card-desc">Mapping the ecosystem of patients, providers, payers, and decision-makers relevant to your challenge.</p>
+                    <div class="brain-step">
+                        <span class="brain-letter green">R</span>
+                        <div class="brain-step-content">
+                            <h3>Research</h3>
+                            <p>Tailored methodology design and expert field execution across global markets.</p>
+                        </div>
                     </div>
-                    <div class="brain-card">
-                        <h4 class="brain-card-title">Historical insights</h4>
-                        <p class="brain-card-desc">Leveraging existing knowledge and previous research to build a foundation for new discoveries.</p>
+                    <div class="brain-step">
+                        <span class="brain-letter green">A</span>
+                        <div class="brain-step-content">
+                            <h3>Analysis</h3>
+                            <p>Rigorous data synthesis with advanced analytics to uncover meaningful patterns.</p>
+                        </div>
+                    </div>
+                    <div class="brain-step">
+                        <span class="brain-letter orange">I</span>
+                        <div class="brain-step-content">
+                            <h3>Interpretation</h3>
+                            <p>Translating findings into clear business implications and strategic recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="brain-step">
+                        <span class="brain-letter orange">N</span>
+                        <div class="brain-step-content">
+                            <h3>Narrative</h3>
+                            <p>Compelling storytelling that brings insights to life for diverse stakeholder audiences.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -988,59 +1494,71 @@
 
     <!-- Case Studies -->
     <section class="case-studies" id="case-studies">
-        <div class="case-studies-container">
+        <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Case studies</p>
+                <span class="section-tag">Case Studies</span>
                 <h2 class="section-title">Research in action</h2>
             </div>
-            <div class="case-studies-grid">
+            <div class="cases-grid">
                 <div class="case-card">
-                    <span class="case-tag">RWE</span>
-                    <h3 class="case-title">Reaching Hard-to-Access Populations Through Responsible Simulation Modeling</h3>
-                    <p class="case-desc">Innovative approaches to understanding rare disease patient journeys.</p>
-                    <a href="#" class="case-link">Read →</a>
+                    <div class="case-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/04/Bridging-the-gap-article-640x427.png" alt="Bridging the gap in rare disease care research visualization" loading="lazy">
+                        <span class="case-tag">Rare Disease</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Bridging the Gap in Rare Disease Care: What Patients and Physicians Need From Each Other</h3>
+                        <a href="#" class="case-link">Read case study &rarr;</a>
+                    </div>
                 </div>
                 <div class="case-card">
-                    <span class="case-tag">AI & Analytics</span>
-                    <h3 class="case-title">Rapid Insight: Strengthening Competitive Understanding Through AI-Supported Analysis</h3>
-                    <p class="case-desc">Leveraging AI to accelerate competitive intelligence gathering.</p>
-                    <a href="#" class="case-link">Read →</a>
+                    <div class="case-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/03/ChatGPT_Image_Feb_272C_20262C_09_52_40_AM-640x427.png" alt="AI-powered analysis of rare disease patient journey" loading="lazy">
+                        <span class="case-tag">AI & Analytics</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">A New Lens on the Rare Disease Journey</h3>
+                        <a href="#" class="case-link">Read case study &rarr;</a>
+                    </div>
                 </div>
                 <div class="case-card">
-                    <span class="case-tag">Qualitative</span>
-                    <h3 class="case-title">Smart Foundations: Enhancing Patient-Centered Qualitative Research</h3>
-                    <p class="case-desc">Building frameworks that put patient voices at the center.</p>
-                    <a href="#" class="case-link">Read →</a>
+                    <div class="case-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/01/RWE_article_image-640x467.png" alt="Real world evidence research methodology" loading="lazy">
+                        <span class="case-tag">RWE</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">The Hidden Driver of RWE Success: Why Country Choice Determines Your Timeline</h3>
+                        <a href="#" class="case-link">Read case study &rarr;</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team -->
     <section class="team" id="team">
-        <div class="team-container">
+        <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Leadership</p>
-                <h2 class="section-title">Meet our team</h2>
+                <span class="section-tag">Leadership</span>
+                <h2 class="section-title">Meet our experts</h2>
             </div>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-avatar">JS</div>
+                    <img src="https://kjtgroup.com/wp-content/uploads/2026/04/Jason-S-640x640.png" alt="Jason Solack, SVP Operations at KJT Group" class="team-photo" loading="lazy">
                     <h3 class="team-name">Jason Solack</h3>
                     <p class="team-role">SVP Operations</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">BP</div>
+                    <img src="https://kjtgroup.com/wp-content/uploads/2026/03/Brian-P-640x640.png" alt="Brian Poeschl MBA, SVP Client Strategy at KJT Group" class="team-photo" loading="lazy">
                     <h3 class="team-name">Brian Poeschl MBA</h3>
                     <p class="team-role">SVP Client Strategy</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">PM</div>
+                    <img src="https://kjtgroup.com/wp-content/uploads/2026/02/Parker-M-640x640.png" alt="Parker Michael MS, AE Reporting Associate at KJT Group" class="team-photo" loading="lazy">
                     <h3 class="team-name">Parker Michael MS</h3>
                     <p class="team-role">AE Reporting Associate</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">AH</div>
+                    <img src="https://kjtgroup.com/wp-content/uploads/2026/01/Abenah-640x640.png" alt="Abenah Harding, Director RWE Program at KJT Group" class="team-photo" loading="lazy">
                     <h3 class="team-name">Abenah Harding</h3>
                     <p class="team-role">Director RWE Program</p>
                 </div>
@@ -1048,12 +1566,61 @@
         </div>
     </section>
 
-    <!-- CTA Block -->
-    <section class="cta-block" id="contact">
-        <div class="cta-container">
-            <h2 class="cta-title">Let's take research further, together.</h2>
-            <p class="cta-subtitle">Ready to transform healthcare insights into action? Our team is here to help.</p>
-            <a href="mailto:contact@kjtgroup.com" class="btn-white">Contact us</a>
+    <!-- Blog -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Insights</span>
+                <h2 class="section-title">Blogs & News</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/04/Bridging-the-gap-article-640x427.png" alt="Rare disease care research article thumbnail" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Rare Disease</span>
+                        <h3 class="blog-title">Bridging the Gap in Rare Disease Care: What Patients and Physicians Need From Each Other</h3>
+                        <p class="blog-date">Apr 7, 2026</p>
+                        <a href="#" class="blog-link">Read more &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/03/ChatGPT_Image_Feb_272C_20262C_09_52_40_AM-640x427.png" alt="AI lens on rare disease journey article thumbnail" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">AI & Analytics</span>
+                        <h3 class="blog-title">A New Lens on the Rare Disease Journey</h3>
+                        <p class="blog-date">Mar 3, 2026</p>
+                        <a href="#" class="blog-link">Read more &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://kjtgroup.com/wp-content/uploads/2026/01/RWE_article_image-640x467.png" alt="Real world evidence success article thumbnail" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">RWE</span>
+                        <h3 class="blog-title">The Hidden Driver of RWE Success: Why Country Choice Determines Your Timeline</h3>
+                        <p class="blog-date">Jan 8, 2026</p>
+                        <a href="#" class="blog-link">Read more &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" id="contact">
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Let's take research further. Together.</h2>
+            <p>Ready to transform healthcare insights into action? Our team of experts is here to help you navigate your next challenge.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@kjtgroup.com" class="btn-cta-primary">Contact us</a>
+                <a href="#solutions" class="btn-cta-ghost">View all solutions</a>
+            </div>
         </div>
     </section>
 
@@ -1061,20 +1628,24 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">KJT <span>Group</span></a>
+                    <p>Taking research further, together. Healthcare consulting and insights with 100% life sciences focus.</p>
+                </div>
                 <div class="footer-col">
-                    <h4>Healthcare expertise</h4>
+                    <h4>Healthcare Expertise</h4>
                     <ul>
                         <li><a href="#">Pharmaceutical</a></li>
                         <li><a href="#">Biotech</a></li>
                         <li><a href="#">Medtech</a></li>
-                        <li><a href="#">Rare disease</a></li>
+                        <li><a href="#">Rare Disease</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="#">Commercial solutions</a></li>
-                        <li><a href="#">Medical affairs</a></li>
+                        <li><a href="#">Commercial Solutions</a></li>
+                        <li><a href="#">Medical Affairs</a></li>
                         <li><a href="#">Connection</a></li>
                         <li><a href="#">Prediction</a></li>
                     </ul>
@@ -1082,36 +1653,25 @@
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Leadership</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email address">
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
                 </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Case studies</a></li>
-                        <li><a href="#">Insights</a></li>
-                        <li><a href="#">BRAIN Framework</a></li>
-                        <li><a href="#">Events</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="newsletter">
-                <h4>Stay updated</h4>
-                <form class="newsletter-form">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email">
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
-                </form>
             </div>
             <div class="footer-bottom">
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Cookie Policy</a>
+                    <a href="#">Acceptable Use Policy</a>
                 </div>
-                <p class="footer-copyright">© 2026 KJT Group. All rights reserved.</p>
+                <p class="footer-copyright">&copy; 2026 KJT Group. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1120,7 +1680,7 @@
         // Sticky nav scroll effect
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 10) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
@@ -1150,58 +1710,7 @@
             });
         });
 
-        // BRAIN Framework interactive pills
-        const brainContent = {
-            background: [
-                { title: 'Understanding context', desc: 'We start by deeply understanding your business context, therapeutic area, and strategic objectives.' },
-                { title: 'Stakeholder landscape', desc: 'Mapping the ecosystem of patients, providers, payers, and decision-makers relevant to your challenge.' },
-                { title: 'Historical insights', desc: 'Leveraging existing knowledge and previous research to build a foundation for new discoveries.' }
-            ],
-            research: [
-                { title: 'Methodology design', desc: 'Crafting the right mix of qualitative and quantitative approaches tailored to your specific questions.' },
-                { title: 'Field execution', desc: 'Expert moderation and data collection across global markets with rigorous quality standards.' },
-                { title: 'Innovative techniques', desc: 'Applying cutting-edge research methods including digital ethnography and AI-assisted analysis.' }
-            ],
-            analysis: [
-                { title: 'Data synthesis', desc: 'Bringing together diverse data streams to identify patterns and meaningful connections.' },
-                { title: 'Advanced analytics', desc: 'Applying statistical rigor and machine learning to uncover hidden insights in your data.' },
-                { title: 'Quality assurance', desc: 'Multi-layer validation processes to ensure accuracy and reliability of findings.' }
-            ],
-            interpretation: [
-                { title: 'Strategic implications', desc: 'Translating findings into clear business implications and actionable recommendations.' },
-                { title: 'Stakeholder perspectives', desc: 'Understanding how insights affect different audiences across your organization.' },
-                { title: 'Decision frameworks', desc: 'Building models that help your teams make confident, data-driven decisions.' }
-            ],
-            narrative: [
-                { title: 'Story development', desc: 'Crafting compelling narratives that bring your data to life for diverse audiences.' },
-                { title: 'Visual communication', desc: 'Creating impactful visualizations that make complex insights accessible and memorable.' },
-                { title: 'Activation support', desc: 'Helping you socialize findings and drive organizational alignment around key insights.' }
-            ]
-        };
-
-        const brainPills = document.querySelectorAll('.brain-pill');
-        const brainContentContainer = document.getElementById('brain-content');
-
-        brainPills.forEach(pill => {
-            pill.addEventListener('click', () => {
-                // Update active state
-                brainPills.forEach(p => p.classList.remove('active'));
-                pill.classList.add('active');
-
-                // Update content
-                const key = pill.dataset.brain;
-                const content = brainContent[key];
-
-                brainContentContainer.innerHTML = content.map(item => `
-                    <div class="brain-card">
-                        <h4 class="brain-card-title">${item.title}</h4>
-                        <p class="brain-card-desc">${item.desc}</p>
-                    </div>
-                `).join('');
-            });
-        });
-
-        // Newsletter form (prevent default)
+        // Newsletter form
         document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Thank you for subscribing!');

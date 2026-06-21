@@ -22,11 +22,19 @@ Comprehensive notes tracking all work done on the KJT Group website across sessi
    - Fully responsive (mobile-first with breakpoints at 640px and 1024px)
 
 ### Design Specifications
-- **Colors:**
-  - Primary green: #0F6E56
-  - Light mint: #E1F5EE
-  - Deep forest: #04342C
-  - White backgrounds with gray accents
+
+#### Updated Brand Colors
+- **Primary green:** #0F6E56 (dominant — nav, hero H1 accent, primary buttons, section labels, BRAIN B/R/A letters, team avatars 1 & 3, card borders on hover)
+- **Dark forest:** #0d1f10 (stats bar bg, CTA block bg)
+- **Light mint bg:** #f7faf8 (alternating section backgrounds)
+- **Orange accent:** #C95F1A (secondary CTA button, news strip border + icon, stats + and % symbols, Solutions 03 & 04 card icons + links, BRAIN I & N letters, CTA contact button, team avatars 2 & 4)
+- **Orange light bg:** #FDF0E8 (orange badge fills, news strip background, Solution 03/04 icon backgrounds)
+- **Orange mid:** #E8854A (stats bar highlight symbols, orange hover states)
+- **Card border:** #ddeae0
+- **Muted body text:** #4a5c4d
+
+#### Orange Usage Rule (IMPORTANT)
+Orange is an ACCENT only — never use it for headings, body text, or backgrounds of full sections. The ratio should be roughly 80% green to 20% orange across the whole page. Every time you would use orange, ask: does this element need to stand out from the surrounding green elements? If yes, use orange. If no, use green.
 
 - **Typography:**
   - system-ui/-apple-system font stack
@@ -113,4 +121,4 @@ Comprehensive notes tracking all work done on the KJT Group website across sessi
 
 ---
 
-**Last Updated:** 2026-06-19
+**Last Updated:** 2026-06-20

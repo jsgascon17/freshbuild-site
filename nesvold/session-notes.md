@@ -87,6 +87,59 @@ Tracking all work done on the Nesvold sales mockup project.
 
 ---
 
+## Session: 2026-06-22 - Pre-Call Prep
+
+### What We Did
+
+1. **Technical Check**
+   - Verified mockup loads correctly at nesvold.dev.freshbuild.co
+   - Confirmed local and deployed files match
+   - All 3 theme buttons present and functional
+   - "What We'd Improve" panel working
+   - GET IN TOUCH button correctly links to joseph@freshbuild.co
+   - Mobile responsive code verified
+
+2. **Pre-Call Email**
+   - Created `pre-call-email.md` to send tonight
+   - Confirms 1pm call time
+   - Re-shares mockup link with credentials
+   - Mentions Vanilla/Willow investments (shows we did homework)
+
+3. **Post-Call Proposal**
+   - Created `proposal.html` - professional one-page proposal
+   - Navy + gold FreshBuild branding
+   - Growth Site package at $999
+   - Blank "Design Direction" section to fill in theme choice
+   - 3-step "What Happens Next" process
+   - Deployed to server: nesvold.dev.freshbuild.co/proposal.html
+
+4. **Call Prep Checklist**
+   - Created `call-prep-checklist.md`
+   - Pre-call setup items
+   - Key numbers (price, walk-away, deposit)
+   - Talking points and objection handling
+   - Post-call follow-up steps
+
+### Files Created
+- `nesvold/pre-call-email.md`
+- `nesvold/proposal.html`
+- `nesvold/call-prep-checklist.md`
+
+### Call Details
+- **Date:** Tomorrow (June 23, 2026)
+- **Time:** 1pm
+- **With:** Peter Nesvold
+
+---
+
+## Session: 2026-06-18 - Sales Mockup Build
+
+### What We Did
+
+(previous session content below)
+
+---
+
 ## Project Overview
 
 ### Client Info
@@ -106,4 +159,4 @@ Tracking all work done on the Nesvold sales mockup project.
 
 ---
 
-**Last Updated:** 2026-06-18
+**Last Updated:** 2026-06-22

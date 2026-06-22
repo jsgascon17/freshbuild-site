@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Redesign Proposal — Nesvold Capital Partners</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .proposal {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0A1628 0%, #1A2744 100%);
+            padding: 40px;
+            text-align: center;
+            border-bottom: 4px solid #C9A84C;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .logo span {
+            color: #C9A84C;
+        }
+
+        .header-subtitle {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Content */
+        .content {
+            padding: 48px 40px;
+        }
+
+        .prepared-for {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .prepared-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-bottom: 8px;
+        }
+
+        .prepared-name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0A1628;
+            margin-bottom: 4px;
+        }
+
+        .prepared-company {
+            font-size: 1rem;
+            color: #64748b;
+        }
+
+        .prepared-date {
+            font-size: 0.875rem;
+            color: #94a3b8;
+            margin-top: 12px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C9A84C;
+            margin-bottom: 16px;
+        }
+
+        /* Package Card */
+        .package-card {
+            background: #f8f9fa;
+            border: 2px solid #0A1628;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .package-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0A1628;
+            margin-bottom: 8px;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #C9A84C;
+            margin-bottom: 16px;
+        }
+
+        .package-desc {
+            color: #64748b;
+            font-size: 0.9375rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .package-features {
+            margin-top: 24px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #1a1a2e;
+            font-size: 0.9375rem;
+            list-style: none;
+        }
+
+        .package-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C9A84C;
+            font-weight: 700;
+        }
+
+        /* Design Direction - Fillable */
+        .design-direction {
+            background: #fffbeb;
+            border: 2px dashed #C9A84C;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .design-direction h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #0A1628;
+            margin-bottom: 12px;
+        }
+
+        .design-direction .fill-in {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            min-height: 80px;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Steps */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #0A1628;
+            color: #C9A84C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0A1628;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: #0A1628;
+            border-top: 4px solid #C9A84C;
+        }
+
+        .cta-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .cta-subtitle {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #C9A84C;
+            color: #0A1628;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #D4B75E;
+            transform: translateY(-2px);
+        }
+
+        .cta-email {
+            margin-top: 16px;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .cta-email a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            background: #f8f9fa;
+            font-size: 0.8125rem;
+            color: #94a3b8;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: #fff;
+            }
+            .proposal {
+                box-shadow: none;
+            }
+            .cta-button {
+                border: 2px solid #C9A84C;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">Fresh<span>Build</span></div>
+            <p class="header-subtitle">Website Redesign Proposal</p>
+        </header>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Prepared For -->
+            <div class="prepared-for">
+                <p class="prepared-label">Prepared For</p>
+                <h1 class="prepared-name">Peter Nesvold</h1>
+                <p class="prepared-company">Nesvold Capital Partners</p>
+                <p class="prepared-date">June 2026</p>
+            </div>
+
+            <!-- Project -->
+            <section class="section">
+                <h2 class="section-title">Project</h2>
+                <p>Complete website redesign for Nesvold Capital Partners — a premium, fast-loading site that matches the credibility and sophistication of a leading merchant bank.</p>
+            </section>
+
+            <!-- Recommended Package -->
+            <section class="section">
+                <h2 class="section-title">Recommended Package</h2>
+                <div class="package-card">
+                    <h3 class="package-name">Growth Site</h3>
+                    <p class="package-price">$999</p>
+                    <p class="package-desc">A complete multi-page website with custom design, optimized for performance and built to convert.</p>
+                    <ul class="package-features">
+                        <li>Custom design based on approved mockup</li>
+                        <li>Up to 6 pages (Home, About, Focus, Team, Transactions, Contact)</li>
+                        <li>Mobile-responsive, fast-loading code</li>
+                        <li>SEO fundamentals (meta tags, schema markup)</li>
+                        <li>Contact form integration</li>
+                        <li>2 rounds of revisions</li>
+                        <li>Launch support & handoff</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Design Direction -->
+            <section class="section">
+                <h2 class="section-title">Design Direction</h2>
+                <div class="design-direction">
+                    <h3>Theme Selection</h3>
+                    <div class="fill-in">
+                        [Fill in after call — which theme did Peter choose?]
+                        <br><br>
+                        □ Classic Prestige (Navy + Gold, Serif headings)<br>
+                        □ Modern Authority (Dark + Blue, Sans-serif)<br>
+                        □ Sophisticated Neutral (Light + Muted gold)
+                    </div>
+                </div>
+            </section>
+
+            <!-- What Happens Next -->
+            <section class="section">
+                <h2 class="section-title">What Happens Next</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Sign Agreement</h4>
+                            <p>Reply to this email to confirm. No lengthy contracts — just a simple email confirmation works.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>50% Deposit</h4>
+                            <p>$499.50 via Venmo, Zelle, or invoice. Balance due at launch.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Work Begins</h4>
+                            <p>Development starts within 48 hours. You'll see progress on a staging site throughout.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2 class="cta-title">Ready to get started?</h2>
+            <p class="cta-subtitle">Reply to this email or click below to confirm.</p>
+            <a href="mailto:joseph@freshbuild.co?subject=Let's%20do%20it%20%E2%80%94%20Nesvold%20Website%20Redesign&body=Hi%20Joseph%2C%0A%0AI'm%20ready%20to%20move%20forward%20with%20the%20website%20redesign.%0A%0A" class="cta-button">Get Started →</a>
+            <p class="cta-email">Or email directly: <a href="mailto:joseph@freshbuild.co">joseph@freshbuild.co</a></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>FreshBuild · Rochester, NY · freshbuild.co</p>
+        </footer>
+    </div>
+</body>
+</html>

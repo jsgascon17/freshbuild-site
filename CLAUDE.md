@@ -55,6 +55,18 @@
 3. SSH to server: `ssh devserver`
 4. Pull changes: `cd /var/www/clients/freshbuild/<client> && git pull`
 
+## Session Sync Reminders
+
+### At the START of each session:
+- Check if any repos need to be pulled (Dad may have made changes)
+- Run `git fetch` and `git status` on active projects to check for divergence
+- Pull any remote changes before starting work
+
+### At the END of each session:
+- Commit and push all local changes to GitHub
+- Verify nothing is left uncommitted (`git status`)
+- This ensures Dad (or anyone on the server) can pull the latest
+
 ## Production Hosting Options for Clients
 
 | Type | Recommendation | Cost |

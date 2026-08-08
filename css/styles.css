@@ -722,6 +722,18 @@ footer {
     color: #9ca3af;
 }
 
+.portfolio-url {
+    display: inline-block;
+    font-size: 13px;
+    color: #14B8A6;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.portfolio-url:hover {
+    text-decoration: underline;
+}
+
 /* Service Detail Cards */
 .service-detail-grid {
     display: grid;

@@ -734,6 +734,28 @@ footer {
     text-decoration: underline;
 }
 
+/* Scrolling Screenshot Preview */
+.screenshot-scroll {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f0fdfa;
+}
+
+.screenshot-scroll img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 3s ease-in-out;
+}
+
+.screenshot-scroll:hover img {
+    top: calc(-100% + 280px);
+}
+
 /* Service Detail Cards */
 .service-detail-grid {
     display: grid;

@@ -1,0 +1,33 @@
+# freshbuild.co — clean URLs
+#
+# Pages are stored as about.html, services.html, locations/rochester-ny.html …
+# but are served at /about, /services, /locations/rochester-ny. The .html form
+# permanently redirects to the clean form so only one address is ever in circulation.
+#
+# Standard: ops/seo-aeo/STANDARD.md — SEO-SITE-16 (clean URLs), SEO-PROCESS-2 (301 on any
+# URL change), SEO-SITE-4 (canonical must resolve), SEO-SITE-13 (single-hop redirects).
+
+RewriteEngine On
+
+# 1. /index.html -> /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# 2. /anything.html -> /anything   (one hop, permanent)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 3. /anything/ -> /anything
+#    Internal links are relative (../about, brighton-ny). Serving both /about and
+#    /about/ would resolve those links against two different base paths and break
+#    the trailing-slash version. Only the no-slash form is ever served.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# 4. Serve the .html file behind the clean URL. Internal rewrite, not a redirect —
+#    the visitor's address bar keeps showing /about.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# Real 404s for anything else (rule SEO-SITE-14) — no catch-all to the homepage.

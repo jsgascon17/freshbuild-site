@@ -30,7 +30,7 @@
         "mainEntity": {
             "@type": "ItemList",
             "name": "Web Design Projects",
-            "numberOfItems": 1,
+            "numberOfItems": 2,
             "itemListElement": [
                 {
                     "@type": "ListItem",
@@ -40,6 +40,20 @@
                         "name": "MDC Assembly LLC Website Redesign",
                         "description": "Multi-page website redesign for a furniture installation company in Ontario, NY. Complete transformation from outdated design to modern, professional site with SEO optimization.",
                         "url": "https://mdc.dev.freshbuild.co",
+                        "creator": {
+                            "@type": "LocalBusiness",
+                            "name": "FreshBuild"
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "CreativeWork",
+                        "name": "ATON Associates Website",
+                        "description": "Custom single-page website for a private investment firm specializing in RIA partnerships. Professional design with navy and gold branding, smooth animations, and mobile-first responsive layout.",
+                        "url": "https://aton.dev.freshbuild.co",
                         "creator": {
                             "@type": "LocalBusiness",
                             "name": "FreshBuild"
@@ -62,7 +76,7 @@
                 "name": "Can I see examples of FreshBuild's web design work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! FreshBuild showcases completed projects in their portfolio. Current featured work includes the MDC Assembly LLC website redesign - a multi-page website for a furniture installation company in Ontario, NY. The portfolio shows before and after comparisons to demonstrate the transformation."
+                    "text": "Yes! FreshBuild showcases completed projects in their portfolio. Featured work includes the MDC Assembly LLC website redesign for a furniture installation company in Ontario, NY, and a custom website for ATON Associates, a private investment firm. The portfolio shows before and after comparisons where available."
                 }
             },
             {
@@ -70,7 +84,7 @@
                 "name": "What kind of websites has FreshBuild designed?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "FreshBuild designs websites for small businesses including contractors, restaurants, local services, and professional services. Featured projects include complete website redesigns with modern design, mobile responsiveness, and SEO optimization. Websites start at $299 for quick refreshes."
+                    "text": "FreshBuild designs websites for small businesses including contractors, professional services, and financial firms. Featured projects include MDC Assembly (furniture installation) and ATON Associates (investment firm). All projects feature modern design, mobile responsiveness, and SEO optimization. Websites start at $299 for quick refreshes."
                 }
             },
             {
@@ -173,11 +187,11 @@
             <span></span>
         </button>
         <div class="nav-links" id="navLinks">
-            <a href="services.html" class="nav-link">Services</a>
+            <a href="services" class="nav-link">Services</a>
             <a href="./#pricing" class="nav-link">Pricing</a>
-            <a href="portfolio.html" class="nav-link active">Work</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="contact.html" class="btn-primary small">Get in Touch</a>
+            <a href="portfolio" class="nav-link active">Work</a>
+            <a href="about" class="nav-link">About</a>
+            <a href="contact" class="btn-primary small">Get in Touch</a>
         </div>
     </nav>
 
@@ -204,14 +218,27 @@
                                 <span class="before-after-label before">Before</span>
                             </div>
                             <div class="before-after-item">
-                                <iframe src="https://mdc.dev.freshbuild.co" title="MDC Assembly website after redesign" loading="lazy"></iframe>
+                                <div class="screenshot-scroll">
+                                    <img src="images/mdc-full.png" alt="MDC Assembly website after redesign" loading="lazy">
+                                </div>
                                 <span class="before-after-label after">After</span>
                             </div>
                         </div>
                         <div class="portfolio-content">
                             <h3>MDC Assembly LLC</h3>
                             <p>Multi-page website redesign for a furniture installation company in Ontario, NY. Complete transformation from outdated design to modern, professional site with SEO optimization.</p>
-                            <a href="https://mdc.dev.freshbuild.co" target="_blank" class="btn-secondary" style="margin-top: 8px;">View Live Site</a>
+                            <a href="https://mdisplays.com" target="_blank" class="portfolio-url">mdisplays.com</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="screenshot-scroll" style="height: 320px;">
+                            <img src="images/aton-full.png" alt="ATON Associates website" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>ATON Associates</h3>
+                            <p>Custom single-page website for a private investment firm specializing in RIA partnerships. Professional design with navy and gold branding, smooth scroll animations, and mobile-first responsive layout.</p>
+                            <a href="https://atonassociates.com" target="_blank" class="portfolio-url">atonassociates.com</a>
                         </div>
                     </div>
 
@@ -222,17 +249,7 @@
                         <div class="portfolio-content">
                             <h3>Your Project Here</h3>
                             <p>Want to be featured? Let's create something great together.</p>
-                            <a href="contact.html" class="btn-secondary" style="margin-top: 8px;">Get Started</a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-card placeholder">
-                        <div class="portfolio-image">
-                            <div class="portfolio-placeholder">+</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Coming Soon</h3>
-                            <p>More projects on the way. Check back soon!</p>
+                            <a href="contact" class="btn-secondary" style="margin-top: 8px;">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -276,8 +293,8 @@
                 <h2>Ready to Transform Your Website?</h2>
                 <p>Join the growing list of businesses with fresh, modern websites.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">Start Your Project</a>
-                    <a href="services.html" class="btn-secondary" style="border-color: white; color: white;">View Services</a>
+                    <a href="contact" class="btn-primary">Start Your Project</a>
+                    <a href="services" class="btn-secondary" style="border-color: white; color: white;">View Services</a>
                 </div>
             </div>
         </section>
@@ -296,26 +313,26 @@
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="services">All Services</a></li>
                         <li><a href="./#pricing">Pricing</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Locations</h4>
                     <ul>
-                        <li><a href="locations/rochester-ny.html">Rochester, NY</a></li>
-                        <li><a href="locations/brighton-ny.html">Brighton, NY</a></li>
-                        <li><a href="locations/pittsford-ny.html">Pittsford, NY</a></li>
-                        <li><a href="locations/henrietta-ny.html">Henrietta, NY</a></li>
-                        <li><a href="locations/victor-ny.html">Victor, NY</a></li>
+                        <li><a href="locations/rochester-ny">Rochester, NY</a></li>
+                        <li><a href="locations/brighton-ny">Brighton, NY</a></li>
+                        <li><a href="locations/pittsford-ny">Pittsford, NY</a></li>
+                        <li><a href="locations/henrietta-ny">Henrietta, NY</a></li>
+                        <li><a href="locations/victor-ny">Victor, NY</a></li>
                     </ul>
                 </div>
             </div>

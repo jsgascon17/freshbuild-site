@@ -9,6 +9,15 @@
 
 RewriteEngine On
 
+# 0. Deny the git metadata directory — must stay first, before any rewrite.
+#    The deploy checkout lives in the webroot, so .git/ was being served.
+#    .git/refs/heads/main gives the tip commit and .git/index lists every
+#    tracked path and blob SHA, which together are enough to walk the trees and
+#    download the entire source history — including files removed from the
+#    webroot but still present in earlier commits (e.g. the internal docs
+#    deleted in 24e6d5c). Verified exploitable before this rule was added.
+RewriteRule ^\.git - [F,L]
+
 # 1. /index.html -> /
 RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
 RewriteRule ^ / [R=301,L]

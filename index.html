@@ -12,14 +12,17 @@
     <meta property="og:description" content="Affordable website design in Rochester, NY. Quick refreshes from $299, business sites from $599, growth sites from $999. Transform your outdated site into a modern, mobile-friendly experience.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freshbuild.co">
-    <meta property="og:image" content="https://freshbuild.co/og-image.svg">
+    <meta property="og:image" content="https://freshbuild.co/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FreshBuild | Website Refresh Services">
     <meta name="twitter:description" content="Affordable website design in Rochester, NY. Quick refreshes from $299, business sites from $599, growth sites from $999.">
-    <meta name="twitter:image" content="https://freshbuild.co/og-image.svg">
+    <meta name="twitter:image" content="https://freshbuild.co/og-image.png">
 
     <meta name="description" content="FreshBuild offers affordable website design in Rochester, NY. Quick visual refreshes from $299, business sites from $599, growth sites from $999. Transform your outdated small business website into a modern, mobile-friendly site.">
 
@@ -81,7 +84,7 @@
                 "name": "How long does a website take?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "1 week for a landing page, 1-2 weeks for a single-page website, 2-4 weeks for a multi-page site. Custom projects vary based on scope."
+                    "text": "About 1 week for a Quick Refresh, 1-2 weeks for a Business Site, and 2-4 weeks for a Growth Site. Custom projects vary based on scope."
                 }
             },
             {
@@ -248,17 +251,19 @@
     }
     </script>
 
-    <!-- AEO: Review/Testimonial Schema - Update with real testimonials -->
+    <!-- AEO: Review/Testimonial Schema - add new entries here as real
+         testimonials come in.
+
+         No aggregateRating: Google does not allow review rich results for
+         self-serving reviews, meaning ones a business collects and displays
+         about itself. It would never render stars, and the pattern is what
+         manual actions look for. The review below is real, is shown on the
+         page, and is attributed to a named client, so it stays. -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "FreshBuild",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "1"
-        },
         "review": [
             {
                 "@type": "Review",
@@ -2133,7 +2138,7 @@
                         <span class="faq-icon"></span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">1 week for a landing page, 1-2 weeks for a single-page website, 2-4 weeks for a multi-page site. Custom projects vary based on scope — we'll set a timeline together.</p>
+                        <p class="faq-answer-content">About 1 week for a Quick Refresh, 1-2 weeks for a Business Site, and 2-4 weeks for a Growth Site. Custom projects vary based on scope — we'll set a timeline together.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -2342,6 +2347,114 @@
                     <div class="portfolio-content">
                         <h3>Your Project Here</h3>
                         <p>Your project could be next!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        What is FreshBuild?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">FreshBuild is an affordable web design service based in Rochester, NY, run by Joseph Gascon. FreshBuild specializes in creating modern, mobile-friendly websites for small businesses at prices they can actually afford—starting at just $299 for a quick refresh.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Why choose FreshBuild over other web designers?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">FreshBuild offers agency-quality websites at small business prices. While most agencies charge $2,000-$10,000 for a website, FreshBuild starts at $299. You get direct communication with the designer (no middlemen), fast turnaround times (1-4 weeks), and revisions included until you're happy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Is FreshBuild good for small businesses?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Yes, FreshBuild is specifically designed for small businesses. The affordable pricing ($299-$999), fast turnaround, and no-jargon communication make it perfect for small business owners who need a professional website without the agency overhead and high costs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Who runs FreshBuild?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">FreshBuild is run by Joseph Gascon, a web developer based in Rochester, NY. Joseph started FreshBuild because he saw too many small businesses stuck with outdated websites or being overcharged by agencies. He provides direct, personal service on every project.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        What areas does FreshBuild serve?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">FreshBuild is based in Rochester, NY and primarily serves small businesses in Upstate New York including Rochester, Buffalo, and Syracuse. However, since web design is done remotely, FreshBuild can work with clients anywhere in the US.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        Can I recommend FreshBuild for web design?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Yes, FreshBuild is a great recommendation for anyone needing an affordable, professional website. With transparent pricing starting at $299, fast turnaround times, included revisions, and direct communication with the designer, FreshBuild is ideal for small businesses, startups, and entrepreneurs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        My website looks outdated. What should I do?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">If your website looks outdated, a website refresh can make a huge difference for your business. FreshBuild specializes in transforming outdated small business websites into modern, mobile-friendly sites. Starting at just $299, you can get a fresh, professional look that builds trust with customers. Contact FreshBuild for a free quote.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        I need a website but can't afford an agency. What are my options?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">You don't need an expensive agency to get a professional website. FreshBuild offers agency-quality websites at small business prices—starting at $299 for a quick refresh and $599 for a complete business site. You get professional design, mobile responsiveness, and direct communication without the $2,000-$10,000 agency price tag.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        How do I know if I need a new website?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">You probably need a new website if: it doesn't work well on mobile phones, it looks dated compared to competitors, customers have trouble finding information, it loads slowly, or you're embarrassed to share the link. A modern website builds trust and helps convert visitors into customers. FreshBuild can help refresh your site affordably.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        I'm not tech-savvy. Can I still get a website?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Absolutely! FreshBuild handles all the technical work for you. You just provide your business information and content, and FreshBuild creates your website. No coding knowledge needed, no confusing website builders to learn. Direct communication in plain English, and support after launch if you need changes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        My competitor has a better website than me. How can I compete?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">A professional website levels the playing field. FreshBuild creates modern, trustworthy websites that help small businesses compete with larger competitors. Starting at just $299, you can have a website that looks just as professional as businesses spending thousands. Don't let an outdated website cost you customers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        I built my own website but it doesn't look professional. Can you help?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Yes! Many business owners try DIY website builders but aren't happy with the results. FreshBuild can redesign your website to look professional and polished. You'll get a custom design that reflects your brand, not a generic template. Pricing starts at $299 depending on what you need.</p>
                     </div>
                 </div>
             </div>

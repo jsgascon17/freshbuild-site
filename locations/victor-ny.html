@@ -11,7 +11,10 @@
     <meta property="og:description" content="Affordable web design in Victor, NY. Local web designer offering websites from $299. Small business websites, landing pages, and more. Free quotes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freshbuild.co/locations/victor-ny">
-    <meta property="og:image" content="https://freshbuild.co/og-image.svg">
+    <meta property="og:image" content="https://freshbuild.co/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web Design Victor NY | Affordable Websites">
@@ -46,6 +49,30 @@
         "serviceType": ["Website Design", "Web Development", "Website Redesign"]
     }
     </script>
+    <!-- Breadcrumb schema (SEO-SITE-11) - mirrors the breadcrumb trail
+         rendered on the page. Breadcrumb rich results are still active in
+         Google, unlike FAQ and HowTo. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freshbuild.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Victor, NY",
+                "item": "https://freshbuild.co/locations/victor-ny"
+            }
+        ]
+    }
+    </script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +105,6 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="../">Home</a>
-                    <span>/</span>
-                    <a href="../about">Locations</a>
                     <span>/</span>
                     <span>Victor, NY</span>
                 </div>

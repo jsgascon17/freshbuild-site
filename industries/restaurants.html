@@ -11,7 +11,10 @@
     <meta property="og:description" content="Professional websites for restaurants starting at $299. Cafes, bars, food trucks, and eateries. Show off your menu and get more customers.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freshbuild.co/industries/restaurants">
-    <meta property="og:image" content="https://freshbuild.co/og-image.svg">
+    <meta property="og:image" content="https://freshbuild.co/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web Design for Restaurants | FreshBuild">
@@ -128,6 +131,30 @@
         ]
     }
     </script>
+    <!-- Breadcrumb schema (SEO-SITE-11) - mirrors the breadcrumb trail
+         rendered on the page. Breadcrumb rich results are still active in
+         Google, unlike FAQ and HowTo. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freshbuild.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Restaurants",
+                "item": "https://freshbuild.co/industries/restaurants"
+            }
+        ]
+    }
+    </script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -160,8 +187,6 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="../">Home</a>
-                    <span>/</span>
-                    <span>Industries</span>
                     <span>/</span>
                     <span>Restaurants</span>
                 </div>
@@ -282,6 +307,45 @@
                         <p class="card-text">
                             Showcase your dishes with beautiful photo displays that make customers hungry.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Common Questions</p>
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How much does a restaurant website cost?</h3>
+                        <p>A professional restaurant website from FreshBuild starts at $299 for a Quick Refresh, $599 for a Business Site with menu, or $999 for a Growth Site. This is much more affordable than the $2,000-$5,000 most agencies charge restaurants.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do restaurants need a website?</h3>
+                        <p>Yes, restaurants absolutely need a website. Customers search online for restaurants, check menus, hours, and locations before visiting. A professional website helps you get found on Google, shows your menu, and builds trust. Social media alone isn't enough—you need a website you control.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What should a restaurant website include?</h3>
+                        <p>A good restaurant website should include: your menu (easy to read, not a PDF), hours of operation, location with a map, photos of your food and space, contact information, and optionally online ordering or reservation links. FreshBuild includes all of these in restaurant website packages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Who does web design for restaurants?</h3>
+                        <p>FreshBuild specializes in affordable web design for restaurants. We create professional websites for restaurants, cafes, bars, bakeries, food trucks, and all types of food businesses. Pricing starts at just $299.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can you put my menu on my website?</h3>
+                        <p>Yes! FreshBuild creates beautiful, easy-to-read menu pages for restaurant websites. Unlike PDF menus that are hard to read on phones, we design menus that look great on all devices and are easy for customers to browse.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can FreshBuild build a website for my cafe?</h3>
+                        <p>Yes! FreshBuild creates affordable websites for cafes and coffee shops. Your website will showcase your menu, atmosphere, and location to help attract more customers. Packages start at $299.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can FreshBuild build a website for my food truck?</h3>
+                        <p>Yes! Food truck websites are perfect for FreshBuild. We can display your menu, schedule/locations, and make it easy for customers to find you. A Business Site at $599 is often perfect for food trucks.</p>
                     </div>
                 </div>
             </div>

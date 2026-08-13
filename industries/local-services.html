@@ -11,7 +11,10 @@
     <meta property="og:description" content="Professional websites for local service businesses starting at $299. Salons, gyms, cleaning services, auto shops, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://freshbuild.co/industries/local-services">
-    <meta property="og:image" content="https://freshbuild.co/og-image.svg">
+    <meta property="og:image" content="https://freshbuild.co/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web Design for Local Businesses | FreshBuild">
@@ -128,6 +131,30 @@
         ]
     }
     </script>
+    <!-- Breadcrumb schema (SEO-SITE-11) - mirrors the breadcrumb trail
+         rendered on the page. Breadcrumb rich results are still active in
+         Google, unlike FAQ and HowTo. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freshbuild.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Local Services",
+                "item": "https://freshbuild.co/industries/local-services"
+            }
+        ]
+    }
+    </script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -160,8 +187,6 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="../">Home</a>
-                    <span>/</span>
-                    <span>Industries</span>
                     <span>/</span>
                     <span>Local Services</span>
                 </div>
@@ -282,6 +307,45 @@
                         <p class="card-text">
                             Clear display of where you are and when you're open, with an embedded map.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Common Questions</p>
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How much does a website cost for a local business?</h3>
+                        <p>A professional local business website from FreshBuild starts at $299 for a Quick Refresh, $599 for a Business Site, or $999 for a Growth Site. This is much more affordable than agencies that typically charge $2,000-$10,000.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do local service businesses need a website?</h3>
+                        <p>Yes, local service businesses absolutely need a website. When customers search for services in their area, businesses with professional websites appear more trustworthy and get more calls. A website works 24/7 to bring you new customers, even when you're closed.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What local businesses does FreshBuild work with?</h3>
+                        <p>FreshBuild creates websites for all types of local service businesses including: hair salons and barbershops, gyms and fitness studios, cleaning services, auto repair shops, pet groomers and veterinarians, spas and wellness centers, tutoring services, photography studios, and more.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can FreshBuild build a website for my salon?</h3>
+                        <p>Yes! FreshBuild creates beautiful websites for hair salons, barbershops, nail salons, and beauty businesses. Your website will showcase your services, stylists, and portfolio. Packages start at just $299.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can FreshBuild build a website for my gym or fitness studio?</h3>
+                        <p>Yes! FreshBuild creates professional websites for gyms, fitness studios, yoga studios, and personal trainers. Display your classes, trainers, and membership info. Affordable pricing starting at $299.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can FreshBuild build a website for my cleaning service?</h3>
+                        <p>Yes! FreshBuild creates professional websites for cleaning services, maid services, and janitorial businesses. Your website will showcase your services, service areas, and make it easy for customers to request quotes. Starting at $299.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can a website help my local business get more customers?</h3>
+                        <p>A professional website helps local businesses get more customers by: appearing in Google searches when people look for your services, building trust with professional photos and testimonials, making it easy for customers to contact you 24/7, and showing up better than competitors without websites. FreshBuild websites are designed to convert visitors into customers.</p>
                     </div>
                 </div>
             </div>

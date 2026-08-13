@@ -19,3 +19,6 @@ aton/
 # Internal docs live in the consulting tree, never the webroot
 *.md
 node_modules/
+
+# Nested client repos - managed separately, never committed here
+clients/

@@ -1,0 +1,41 @@
+#!/bin/sh
+# Run the SEO/AEO local checks before anything leaves this machine.
+#
+# Local checks only: they need no network and finish in well under a second, so
+# this costs nothing on a normal push. The live checks run after deploy instead,
+# since they test what is actually being served.
+#
+# Standard: ~/projects/freshbuild-ops/ops/seo-aeo/STANDARD.md
+# Install:  git config core.hooksPath .githooks
+#
+# Bypass once with:  git push --no-verify
+# (Do that only when you already know what the finding is and are fixing it in
+# the next commit. Every rule here traces to something that actually broke.)
+
+OPS="${FRESHBUILD_OPS:-$HOME/projects/freshbuild-ops}"
+CHECK="$OPS/bin/seo-check"
+PROFILE="freshbuild.co"
+
+if [ ! -x "$CHECK" ]; then
+    echo "pre-push: seo-check not found at $CHECK - skipping SEO/AEO checks."
+    echo "          clone https://github.com/jsgascon17/freshbuild-ops or set FRESHBUILD_OPS."
+    exit 0
+fi
+
+echo "pre-push: running SEO/AEO local checks ($PROFILE)..."
+if "$CHECK" --profile "$PROFILE" --local; then
+    exit 0
+fi
+
+cat <<'EOF'
+
+pre-push: BLOCKED - the push was stopped by an error-severity finding above.
+
+Each finding names the rule it broke. Look it up in
+  ~/projects/freshbuild-ops/ops/seo-aeo/STANDARD.md
+for why the rule exists and what actually went wrong the time it was written.
+
+If the rule is wrong, change the rule -- do not work around it.
+To push anyway: git push --no-verify
+EOF
+exit 1

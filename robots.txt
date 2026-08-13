@@ -3,7 +3,8 @@
 User-agent: *
 Allow: /
 
-# AI crawler policy (rule SEO-SITE-9, ops/seo-aeo/STANDARD.md)
+# AI crawler policy (rule AEO-ACCESS-1)
+# Standard: github.com/jsgascon17/freshbuild-ops — ops/seo-aeo/STANDARD.md
 # Decision: block AI *training*, allow AI *retrieval*.
 # Training crawlers take content to train a model and send back nothing. Retrieval
 # crawlers fetch a page to answer someone's live question and can cite us, so

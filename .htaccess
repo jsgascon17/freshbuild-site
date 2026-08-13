@@ -4,8 +4,11 @@
 # but are served at /about, /services, /locations/rochester-ny. The .html form
 # permanently redirects to the clean form so only one address is ever in circulation.
 #
-# Standard: ops/seo-aeo/STANDARD.md — SEO-SITE-16 (clean URLs), SEO-PROCESS-2 (301 on any
-# URL change), SEO-SITE-4 (canonical must resolve), SEO-SITE-13 (single-hop redirects).
+# Standard: github.com/jsgascon17/freshbuild-ops — ops/seo-aeo/STANDARD.md
+#   SEO-SITE-6    one URL form per page, sitewide
+#   SEO-SITE-4    canonical must resolve
+#   SEO-SITE-5    redirects are single-hop
+#   SEO-PROCESS-1 any URL change ships with a 301
 
 RewriteEngine On
 

@@ -55,11 +55,34 @@
 - **Account:** `github.com/jsgascon17`
 - **freshbuild.co site:** `https://github.com/jsgascon17/freshbuild-site.git`
 
+## SEO / AEO Standard
+
+Rules and tooling live in a separate repo: **`jsgascon17/freshbuild-ops`**
+(clone to `~/projects/freshbuild-ops`).
+
+- `ops/seo-aeo/STANDARD.md` — numbered rules. Cite the ID (`SEO-SITE-4`) in
+  commits, `.htaccess`, and client reports.
+- `bin/seo-check` — enforces the mechanical rules.
+
+```sh
+~/projects/freshbuild-ops/bin/seo-check --profile freshbuild.co          # local + live
+~/projects/freshbuild-ops/bin/seo-check --profile freshbuild.co --local  # pre-deploy
+~/projects/freshbuild-ops/bin/seo-check --list                           # all profiles
+```
+
+**Local checks run automatically on `git push`** via `.githooks/pre-push`, and
+an error blocks the push. If hooks stop firing after a fresh clone, re-run
+`git config core.hooksPath .githooks` — that setting is per-clone, not committed.
+
+Before adding a rule, read the "Adding a rule" section at the end of
+`STANDARD.md`. A rule ships with its check, or it gets forgotten.
+
 ## Workflow
 1. Edit files locally
-2. Push to GitHub
+2. Push to GitHub — the pre-push hook runs `seo-check --local`
 3. SSH to server: `ssh devserver`
 4. Pull changes: `cd /var/www/clients/freshbuild/<client> && git pull`
+5. Run `seo-check --profile <site> --live` to verify what is actually served
 
 ## Session Sync Reminders
 

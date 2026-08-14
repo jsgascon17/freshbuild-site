@@ -53,7 +53,15 @@
 
 ## GitHub
 - **Account:** `github.com/jsgascon17`
-- **freshbuild.co site:** `https://github.com/jsgascon17/freshbuild-site.git`
+- **freshbuild.co site:** `jsgascon17/freshbuild-site` — the only repo for this
+  site. The local working copy is `~/projects/freshbuild-consulting`; the folder
+  name differs from the repo name, which is fine.
+- **SEO/AEO tooling:** `jsgascon17/freshbuild-ops` (private)
+
+`jsgascon17/freshbuild-consulting` is **archived**. It used to hold a second
+copy of this same webroot, and on 2026-08-11 it had silently fallen 7 commits
+behind production — a fix pushed there would have deployed nothing. One repo
+now, so that cannot recur. Do not un-archive it or re-add it as a remote.
 
 ## SEO / AEO Standard
 

@@ -47,9 +47,20 @@
 | Sandbox | `https://sandbox.dev.freshbuild.co` | TBD | Learning/sandbox — not a real client |
 
 ## Creating New Client Sites
-**You cannot run this — ask Dad.**
+
+Full checklist: **`ops/client-onboarding/CHECKLIST.md`** in
+`jsgascon17/freshbuild-ops`. Follow it in order — the steps have IDs
+(`CLIENT-3`) so a half-finished setup can be described precisely.
+
+Settle static vs WordPress (`CLIENT-0`) before asking Dad for anything; it
+decides whether he needs to hand back database credentials.
+
+The server site itself you **cannot** create — ask Dad:
 - Script: `sudo create-client-site <client-name> freshbuild`
-- Dad will provide database credentials after running
+- Dad will provide database credentials after running, for WordPress sites
+
+Do not keep client notes, feedback, or credentials in this repo — it is the
+live webroot and serves every file in it, `.md` included (`CLIENT-7`).
 
 ## GitHub
 - **Account:** `github.com/jsgascon17`

@@ -44,7 +44,7 @@
 | Nesvold | `https://nesvold.dev.freshbuild.co` | `jsgascon17/nesvold-site` | Static HTML, password protected |
 | KJT | `https://kjt.dev.freshbuild.co` | `jsgascon17/kjt-site` | Static HTML, password protected (private repo) |
 | ATON | `https://aton.dev.freshbuild.co` | `jsgascon17/ATON-site` | Static HTML, password protected |
-| AndyFixesIt | `https://andyfixesit.dev.freshbuild.co` | `jsgascon17/andyfixesit-site` | Static HTML. Scaffold only — content is TODO placeholders pending client facts. Awaiting `create-client-site` (CLIENT-3) |
+| AndyFixesIt | `https://andyfixesit.dev.freshbuild.co` | `jsgascon17/andyfixesit-site` | Static HTML, private repo, password protected. Scaffold only — content is TODO placeholders pending client facts. Awaiting `create-client-site` (CLIENT-3) and `.htpasswd` (CLIENT-6) |
 | Sandbox | `https://sandbox.dev.freshbuild.co` | TBD | Learning/sandbox — not a real client |
 
 ## Creating New Client Sites

@@ -483,6 +483,114 @@ nav {
 }
 
 /* CTA Section */
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(20, 184, 166, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(20, 184, 166, 0.15);
+    border-color: rgba(20, 184, 166, 0.3);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 80px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: rgba(20, 184, 166, 0.1);
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #5a6b7c;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.testimonial-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2b3c;
+    margin-bottom: 4px;
+}
+
+.testimonial-info p {
+    font-size: 14px;
+    color: #5a6b7c;
+}
+
+/* Which project the quote is about. Only on /testimonials - the homepage card
+   stays a single quote. */
+.testimonial-project {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(20, 184, 166, 0.15);
+    font-size: 14px;
+    line-height: 1.7;
+    color: #5a6b7c;
+}
+
+.testimonial-project a {
+    color: #0D9488;
+    font-weight: 500;
+}
+
+/* Link from the homepage card through to the full list. */
+.testimonials-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.testimonials-more a {
+    color: #0D9488;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.testimonials-more a:hover {
+    text-decoration: underline;
+}
+
 .cta-section {
     background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
     padding: 80px 40px;
@@ -924,6 +1032,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .nav-links {
+        gap: 24px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 30px;

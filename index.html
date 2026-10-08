@@ -821,6 +821,10 @@
         }
 
         @media (max-width: 1024px) {
+            .nav-links {
+                gap: 24px;
+            }
+
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
@@ -1308,6 +1312,22 @@
         .testimonial-info p {
             font-size: 14px;
             color: #5a6b7c;
+        }
+
+        .testimonials-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .testimonials-more a {
+            color: #0D9488;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .testimonials-more a:hover {
+            text-decoration: underline;
         }
 
         /* Portfolio Grid */
@@ -1828,6 +1848,7 @@
             <a href="services" class="nav-link">Services</a>
             <a href="#pricing" class="nav-link">Pricing</a>
             <a href="portfolio" class="nav-link">Work</a>
+            <a href="testimonials" class="nav-link">Testimonials</a>
             <a href="about" class="nav-link">About</a>
             <a href="contact" class="btn-primary small">Get in Touch</a>
         </div>
@@ -2381,6 +2402,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="testimonials-more">
+                <a href="testimonials">Read all testimonials &rarr;</a>
             </div>
         </div>
     </section>

@@ -21,6 +21,16 @@ RewriteEngine On
 #    deleted in 24e6d5c). Verified exploitable before this rule was added.
 RewriteRule ^\.git - [F,L]
 
+# 0a. Deny Markdown, for the same reason as 0. The deploy checkout is the
+#     webroot, so every .md file in the repo is served: CLAUDE.md returned 200
+#     and gave out the dev server's IP, the /var/www layout, the full client
+#     list, and which paths require Dad. None of it is for visitors, and none
+#     of it should be in a search index either.
+#
+#     Denied rather than deleted: the file has to stay in the repo, since it is
+#     what tells Claude how this site is built and deployed.
+RewriteRule \.md$ - [F,L]
+
 # 0b. www -> apex, permanently. Both hostnames were serving 200, so every page
 #     existed at two addresses. The canonical tag pointed at the apex, but
 #     Google indexed the www form anyway (observed in search results for

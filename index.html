@@ -850,6 +850,19 @@
             align-items: stretch;
         }
 
+        /* Add-on grids. The column count used to be an inline style on the
+           element, which beats every media query, so on a 390px phone the four
+           1fr tracks refused to shrink below min-content (132+141+149+162 =
+           584px inside a 350px container) and dragged the whole homepage out
+           to 676px wide. Classes so the breakpoints below can reach them. */
+        .pricing-grid--addons-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .pricing-grid--addons-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .pricing-card {
             background: white;
             border-radius: 24px;
@@ -1038,6 +1051,12 @@
                 grid-template-columns: 1fr;
                 max-width: 450px;
                 margin: 0 auto;
+            }
+
+            .pricing-grid--addons-4,
+            .pricing-grid--addons-3 {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: none;
             }
 
             .pricing-card.popular {
@@ -1822,7 +1841,9 @@
 
             .services-grid,
             .portfolio-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .pricing-grid--addons-4,
+            .pricing-grid--addons-3 {
                 grid-template-columns: 1fr;
             }
 
@@ -2052,7 +2073,7 @@
                 <h3 class="section-title" style="font-size: 28px;">Add-On <span class="gradient-text">Services</span></h3>
                 <p class="section-subtitle">Boost your project with these extras.</p>
             </div>
-            <div class="pricing-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="pricing-grid pricing-grid--addons-4">
                 <div class="pricing-card" style="padding: 30px 24px;">
                     <div class="pricing-header" style="padding-bottom: 16px; margin-bottom: 16px;">
                         <h3 class="pricing-name" style="font-size: 18px;">Logo Refresh</h3>
@@ -2094,7 +2115,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 24px;">
+            <div class="pricing-grid pricing-grid--addons-3" style="margin-top: 24px;">
                 <div class="pricing-card" style="padding: 30px 24px;">
                     <div class="pricing-header" style="padding-bottom: 16px; margin-bottom: 16px;">
                         <h3 class="pricing-name" style="font-size: 18px;">Basic SEO</h3>

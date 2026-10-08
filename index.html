@@ -1821,8 +1821,16 @@
             }
 
             .services-grid,
-            .portfolio-grid {
+            .portfolio-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* minmax(350px, 1fr) does not shrink below 350px, and a 375px phone
+               leaves the container 335px - the track would overflow the screen
+               and scroll the page sideways. */
+            .testimonial-card {
+                padding: 30px 24px;
             }
 
             .contact-form {

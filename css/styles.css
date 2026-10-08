@@ -1092,8 +1092,17 @@ footer {
     .services-grid,
     .portfolio-grid,
     .faq-grid,
-    .process-grid {
+    .process-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* minmax(350px, 1fr) does not shrink below its 350px minimum, and a 375px
+       phone leaves the container 335px. Without this the grid track is wider
+       than the screen and the whole page scrolls sideways. Every other grid
+       above is in this list for the same reason. */
+    .testimonial-card {
+        padding: 30px 24px;
     }
 
     .contact-form {

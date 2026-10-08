@@ -13,7 +13,8 @@
 - `/var/www/dgascon.com/`
 - `/var/www/clients/dgascon/`
 - Anything requiring sudo
-- Creating new client sites
+- Creating new client sites **for WordPress** (that needs a database). A
+  *static* dev site you can create yourself — see "Creating New Client Sites"
 - Database changes
 - SSL certificates
 - DNS changes
@@ -45,7 +46,7 @@
 | KJT | `https://kjt.dev.freshbuild.co` | `jsgascon17/kjt-site` | Static HTML, password protected (private repo) |
 | ATON | `https://aton.dev.freshbuild.co` | `jsgascon17/ATON-site` | Static HTML, password protected |
 | AG Events | `https://agevents.dev.freshbuild.co` | `jsgascon17/agevents-site` | Static HTML, live (200), noindex via server-wide header. **Server dir is NOT a git checkout** — plain files, so `git pull` does not work there (CLIENT-5 outstanding). What is served at `/` is the lookbook: server `index.html` is byte-identical to repo `lookbook/index.html`. A plain clone would not reproduce that layout. Local working copy is `~/projects/ag-events` |
-| AndyFixesIt | `https://andyfixesit.dev.freshbuild.co` | `jsgascon17/andyfixesit-site` | Static HTML, private repo, password protected. Scaffold only — content is TODO placeholders pending client facts. Awaiting `create-client-site` (CLIENT-3) and `.htpasswd` (CLIENT-6) |
+| AndyFixesIt | `https://andyfixesit.dev.freshbuild.co` | `jsgascon17/andyfixesit-site` | Static HTML, private repo, **not** password protected — deliberate (2026-10-06) so Andy can open the proposal on his phone without friction, so CLIENT-6 is closed as "no", not outstanding. Server dir **is** a normal git checkout, so `git pull` works there (unlike AG Events). Live: `proposal.html` plus three homepage directions that differ by **audience**, not palette — `v1.html` Call First (seniors, phone-led), `v2.html` The Job List (homeowners), `v3.html` Property & Rentals (landlords). `index.html` is still the scaffold (22 TODOs) pending client facts. Licence, insurance, years in trade, reviews and prices are absent rather than placeholdered — those are Andy's claims to make, so never invent them |
 | Sandbox | `https://sandbox.dev.freshbuild.co` | TBD | Learning/sandbox — not a real client |
 
 ## Creating New Client Sites
@@ -57,8 +58,29 @@ Full checklist: **`ops/client-onboarding/CHECKLIST.md`** in
 Settle static vs WordPress (`CLIENT-0`) before asking Dad for anything; it
 decides whether he needs to hand back database credentials.
 
-The server site itself you **cannot** create — ask Dad:
-- Script: `sudo create-client-site <client-name> freshbuild`
+For a **static** site you do not need Dad and you do not need
+`create-client-site` — the whole job is `mkdir` plus `git clone`. Verified on the
+box 2026-10-06, and how `andyfixesit` was actually built:
+
+- `/var/www/clients/freshbuild/` is `freshbuild:www-data` `drwxrwxr-x`, so
+  `mkdir` as `freshbuild` succeeds
+- The vhost is a wildcard `VirtualDocumentRoot /var/www/clients/freshbuild/%1`,
+  so there is no per-site Apache config to create
+- DNS is a Cloudflare wildcard and TLS already covers `*.dev.freshbuild.co`
+- `AllowOverride All` is set and `htpasswd` is on your PATH, so `CLIENT-6` is
+  yours too (KJT works this way, `.htpasswd` inside its own directory)
+
+Write the `.git` deny rule into `.htaccess` **before** you clone. The checkout
+lives in the webroot, so cloning first is what opens the exposure `CLIENT-5`
+warns about.
+
+Running `sudo create-client-site` is actively worse for a static site: it creates
+a MySQL database you do not need, and drops a placeholder `index.html` you then
+have to delete before you can clone.
+
+Ask Dad only for a database, a domain or certificate **outside** the wildcard, or
+production hosting:
+- Script (WordPress only): `sudo create-client-site <client-name> freshbuild`
 - Dad will provide database credentials after running, for WordPress sites
 
 Do not keep client notes, feedback, or credentials in this repo — it is the

@@ -63,6 +63,22 @@
         },
         "priceRange": "$299 - $999",
         "serviceType": ["Website Design", "Website Redesign", "Web Development"],
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Peter Nesvold",
+                    "jobTitle": "Partner",
+                    "worksFor": {
+                        "@type": "Organization",
+                        "name": "ATON Associates",
+                        "url": "https://atonassociates.com"
+                    }
+                },
+                "reviewBody": "I couldn\u2019t be happier with the website. The entire process was fast, easy, and remarkably cost-effective. He took my vision and turned it into a polished, professional site in just a few weeks, was highly responsive throughout the process, and delivered far more than I expected for the price. I would recommend him without hesitation."
+            }
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Website Services",
@@ -1281,7 +1297,7 @@
             font-family: 'Space Grotesk', sans-serif;
         }
 
-        .testimonial-info h4 {
+        .testimonial-info h3 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 18px;
             font-weight: 700;
@@ -1292,26 +1308,6 @@
         .testimonial-info p {
             font-size: 14px;
             color: #5a6b7c;
-        }
-
-        .testimonial-placeholder {
-            background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(20, 184, 166, 0.1) 100%);
-            border: 2px dashed rgba(20, 184, 166, 0.3);
-        }
-
-        .testimonial-placeholder .testimonial-text {
-            color: #9ca3af;
-            font-style: italic;
-        }
-
-        .testimonial-placeholder .testimonial-avatar {
-            background: rgba(20, 184, 166, 0.2);
-            color: rgba(20, 184, 166, 0.5);
-        }
-
-        .testimonial-placeholder .testimonial-info h4,
-        .testimonial-placeholder .testimonial-info p {
-            color: #9ca3af;
         }
 
         /* Portfolio Grid */
@@ -2354,6 +2350,36 @@
                         <li><span class="check-icon">✓</span> Stand out from competitors</li>
                         <li><span class="check-icon">✓</span> Affordable refresh, not a full rebuild</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - real, attributed, client-sent quotes only.
+         Every quote here must be words a client actually wrote, shown on the
+         page and attributed by name (AEO-DATA-5, AEO-DATA-6). No placeholder
+         cards: if there is nothing to show, the section goes away. -->
+    <section id="testimonials" class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Testimonials</p>
+                <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+                <p class="section-subtitle">
+                    Don&rsquo;t just take my word for it.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "I couldn&rsquo;t be happier with the website. The entire process was fast, easy, and remarkably cost-effective. He took my vision and turned it into a polished, professional site in just a few weeks, was highly responsive throughout the process, and delivered far more than I expected for the price. I would recommend him without hesitation."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">P</div>
+                        <div class="testimonial-info">
+                            <h3>Peter Nesvold</h3>
+                            <p>Partner, ATON Associates</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
